@@ -43,6 +43,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//SOCIAL ICONS LINKS TO NEW TAB
+
+
+const icons = document.querySelectorAll('.icon');
+
+// Add click event listener to each icon
+icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        // Get the data-link attribute value
+        const link = icon.getAttribute('data-link');
+        // Open the link in a new tab
+        window.open(link, '_blank');
+    });
+});
+
 //TELEIES 
 
 // document.addEventListener("DOMContentLoaded", function() {

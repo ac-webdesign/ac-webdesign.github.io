@@ -468,7 +468,9 @@ p{
     flex-direction: row;
     gap: 8px;
 }
-
+.icon{
+    cursor: pointer;
+}
 /* FORMA EPIKOINWNIAS */
 
 form {
