@@ -1,0 +1,339 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates','Poppins',Arial, Helvetica, sans-serif;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+
+}
+h1{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+p{
+    font-weight: 200;
+}
+.about-hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    margin-left: 10%;
+    margin-bottom: 20px;
+
+}
+
+.about-hero p{
+    max-width: 500px;
+    min-width: 300px;
+    margin-right: 10%;
+    color: rgb(241, 241, 241);
+}
+.line{
+    border: none;
+    border-bottom: 3px solid white;
+    width: 50px;
+    height: 3px;
+
+}
+#about-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+   
+}
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #1f0f3d;
+    color: white;
+    opacity: 0.5;
+    z-index: 1000;
+    animation: fade-in linear;
+    animation-timeline: view();
+    
+    
+}
+#aboutImage{
+    width: 300px;
+    height: 250px;
+    margin-right: 10%;
+    padding: 40px;
+}
+.about{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+
+    scroll-snap-align: start;
+        transform: translateY(0);
+        animation: scrollAnimation 1s ease-in-out;
+   
+}
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 5%;
+    z-index: 1000; 
+    backdrop-filter: blur(10px); 
+
+}
+.navbar{
+    display: flex;
+    position: absolute;
+    right: 20%;
+    gap: 10px;
+    
+}
+.navbar a{
+    padding: 5px 10px;
+    background-color:transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 8px;
+    position: relative;
+}
+.navbar a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 1px;
+    background-color: transparent;
+    transition: width 0.5s ease;
+}
+
+.navbar a:hover::before {
+    background-color: rgb(228, 228, 228); /* Change underline color on hover */
+    width: calc(100% - 1px); /* Expand underline width to 100% minus 1px */
+    
+}
+
+.burger{
+    display: none;
+    margin-right: 5%;
+    cursor: pointer;
+    position: relative; /* Add this line */
+
+}
+.logo{
+    width: 150px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+
+.homepage {
+    background-image: url(images/darknew.png);
+    color: rgb(223, 223, 223);
+    background-size: cover;
+    
+}
+.homepage p{
+    position: absolute;
+    bottom: 5%;
+}
+
+.hero-homepage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+    left: 10%;
+}
+.tabs{
+    display: flex;
+
+        flex-direction: row;
+        gap: 10px;
+    width: 90%;
+    margin-right: 10%;
+
+}
+.tab{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid;
+}
+.tab h2{
+    font-size: 1rem;
+}
+.tab p{
+    font-size: 0.8rem;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#work-btn{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: transparent;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#work-btn:hover{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: white;
+    color: rgb(22, 22, 22);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#about-btn{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: white;
+    color: rgb(15, 15, 15);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+#about-btn:hover{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color:transparent;
+    color: rgb(240, 240, 240);
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+
+@keyframes fade-in{
+    from {scale: 1; opacity: 0.5;}
+    to {scale: 1; opacity: 1;}
+}
+.skills-page {
+    background-color: #113f5e;
+    opacity: 0.5; 
+    animation: fade-in linear;
+    animation-timeline: view();/* Initially set opacity to 0 for fade-in effect */
+}
+.work-page {
+    background-color: #0f0779;
+    opacity: 1; /* Initially set opacity to 0 for fade-in effect */
+}
+.contact-page {
+    background-color: #837777;
+    opacity: 0.5; 
+    animation: fade-in linear;
+    animation-timeline: view();/* Initially set opacity to 0 for fade-in effect */
+}
+.transparent-background {
+    background-color: transparent !important;
+}
+
+.navigation-indicator {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure indicator is above other content */
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.5s; /* Smooth transition for scaling */
+  }
+  
+  .dot.active {
+    transform: scale(1.5); /* Make active dot bigger */
+  }
+
+  .scroll-line{
+    height: 10px;
+    background-color: #fdfdfd;
+    width: 100%;
+    position: fixed;
+    top: 5%;
+    z-index: 1000;
+    scale: 0 1;
+    animation: scroll-line linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-line{
+    to{scale: 1 1;}
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+    .burger {
+        display: block; /* Display the burger menu on small screens */
+        height: 30px; /* Set the height of the burger menu */
+        width: auto; /* Allow the width to adjust automatically */
+        margin-right: 10%; /* Add margin to the right of the burger menu */
+    }
+    .navbar {
+        display: none; /* Hide the navbar on small screens */
+    }
+    .tabs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .tab{
+        width: 80%;
+    }
+    #aboutImage{
+        display: none;
+    }
+}

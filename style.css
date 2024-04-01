@@ -1,0 +1,600 @@
+/* HTML */
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Montserrat Alternates','Poppins',Arial, Helvetica, sans-serif;
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+p{
+    font-weight: 200;
+}
+
+/* EVERY PAGE */
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+
+       
+   
+}
+
+/* HOMEPAGE - PAGE 1 */
+
+
+.homepage {
+    background-image: url(images/wallpaperbetter.jpg);
+    color: rgb(223, 223, 223);
+    background-size: cover;
+    
+}
+.homepage p{
+    position: absolute;
+    bottom: 5%;
+}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
+    backdrop-filter: blur(10px);
+    gap: 20px; 
+
+}
+
+.logo{
+    width: 150px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    position: absolute;
+    right: 20%;
+    gap: 10px;
+    
+}
+.navbar a{
+    padding: 5px 20px;
+    background-color:transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 8px;
+    position: relative;
+}
+
+/*YPOGRAMISMOS TWN STOIXEIWN NAVBAR STO HOVERING*/
+.navbar a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 1px;
+    background-color: transparent;
+    transition: width 0.5s ease;
+}
+
+.navbar a:hover::before {
+    background-color: rgb(228, 228, 228); /* Change underline color on hover */
+    width: calc(100% - 1px); /* Expand underline width to 100% minus 1px */
+    
+}
+
+/* TO BURGER ENERGOPOIEITAI OTAN WIDTH<768PX TO BLEPEIS STA @MEDIA */
+.burger{
+    display: none;
+    margin-right: 10%;
+    cursor: pointer;
+    position: relative; /*DEN KSERW AN XREIAZETAI*/
+
+}
+
+/*TO SCROLL LINE EINAI H GRAMMH PANW AP TO NAVBAR OPOTE THELW TO VGAZW*/
+.scroll-line{
+    height: 10px;
+    background-color: #fdfdfd;
+    width: 100%;
+    position: fixed;
+    top: 5%;
+    z-index: 1000;
+    scale: 0 1;
+    animation: scroll-line linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-line{
+    to{scale: 1 1;}
+  }
+
+  /* HOMEPAGE  HERO SECTION*/
+
+  .hero-homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    left: 20%;
+}
+
+/* HOMEPAGE BUTTONS */
+#buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#work-btn{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: transparent;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#work-btn:hover{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: white;
+    color: rgb(22, 22, 22);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#about-btn{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color: white;
+    color: rgb(15, 15, 15);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+#about-btn:hover{
+    padding:5px 30px;
+    border: 2px white solid;
+    background-color:transparent;
+    color: rgb(240, 240, 240);
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.about-page button{
+    width: 180px;
+}
+/* TELEIES DEKSIA XREIAZONTAI PROGRAMMATISMO */
+
+.navigation-indicator {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure indicator is above other content */
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.5s; /* Smooth transition for scaling */
+  }
+  
+  .dot.active {
+    transform: scale(1.5); /* Make active dot bigger */
+  }
+
+
+  /* ABOUT PAGE - PAGE 2 */
+
+  .about-page {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/wallpaperbetter.jpg);
+    background-size: cover;
+    color: white;
+    opacity: 1;
+    position: relative;
+
+}
+
+/* ABOUT HERO SECTION */
+
+.about-hero{
+    /* background-color: #0f0779; */
+    backdrop-filter: blur(2px);
+    border-radius: 36px;
+    padding: 10px;
+    /* width: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    /* margin-left: 10%; */
+}
+
+/* TO KEIMENO MAZI ME THN EIKONA */
+.about{
+    width: 80%;
+    gap: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* KEIMENO */
+.about-hero p{
+    font-size: 1.2rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: 50ch;
+    min-width: 300px; *
+    color: rgb(241, 241, 241);
+}
+
+/* GRAMMH */
+
+.about-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.line{
+    border: none;
+    border-bottom: 3px solid white;
+    width: 50px;
+    height: 3px;
+    margin-right: 10px;
+
+}
+
+/* EIKONA */
+#aboutImage{
+    width: 200px;
+    height: auto;
+    margin-right: 10%;
+    padding: 40px;
+}
+
+.about-page button{
+    width: 180px;
+    
+}
+
+/* 3 STHLES ME KEIMENO - MINIMAL KTL */
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 90%;
+}
+
+.tab{
+    background-color: hsl(261, 61%, 5%);
+    width: 300px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    /* border: 1px solid; */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgb(30, 64, 68);
+}
+.tab:hover{
+    transform: scale(1.05) ;
+    box-shadow: 0 0 15px rgb(70, 131, 146);
+    /* transform: translateY(30%); */
+}
+.tab:hover .tab-content{
+    /* transform: scale(1.05) ; */
+    transform: translateY(-40%);
+}
+.tab-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(7%);
+    transition: transform 0.5s ease;
+}
+.tab h2{
+    margin: 0;
+    font-size: 1rem;
+
+}
+
+.tab p{
+    margin: 5px;
+    font-size: 0.8rem;
+}
+.tabImage{
+    /* width: 180px; */
+    height: 65px;
+    margin-bottom: 40px;
+    background-size: cover;
+}
+
+/* OI YPOLOIPES SELIDES */
+
+.skills-page {
+    background-color: #113f5e;
+    opacity: 0.5; 
+    animation: fade-in linear;
+    animation-timeline: view();/* Initially set opacity to 0 for fade-in effect */
+}
+
+/* WORK PAGE */
+
+.work-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/wallpaperbetter.jpg);
+    background-size: cover;
+    color: white;
+    opacity: 1;
+    position: relative;
+}
+.work-hero{
+    backdrop-filter: blur(2px);
+    border-radius: 36px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+}
+/* TO KEIMENO MAZI ME THN EIKONA */
+.work{
+    width: 80%;
+    gap: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.work h1{
+    margin-left: 55px;
+}
+
+.work button{
+    width: 180px;
+    margin-left: 55px;
+}
+#workImage1{
+    width: 646px;
+    height: auto;
+}
+#workImage2{
+    width: 646px;
+    height: auto;
+}
+
+
+/* CONTACT  PAGE*/
+
+
+.contact-page {
+    background-image: url(images/wallpaperbetter.jpg);
+    background-size: cover;
+    
+}
+.contact{
+    width: 80%;
+    gap: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.contact-hero{
+    backdrop-filter: blur(2px);
+    border-radius: 36px;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+}
+.contact h1{
+    color:#e4e4e4;
+}
+.contact h2{
+    color:#dadada;
+}
+.contact-hero p{
+    font-size: 1.2rem;
+    max-width: 500px;
+    min-width: 300px;
+    color: rgb(241, 241, 241);
+}
+
+.socialSection{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+/* FORMA EPIKOINWNIAS */
+
+form {
+    background-color:rgba(46, 127, 172,0.05); /* Semi-transparent white background */
+    padding: 20px 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Apply backdrop blur effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    min-width: 300px;    
+    max-width: 300px;    
+    position: relative;
+    height: 400px;
+}
+form img{
+    position: absolute;
+    top: -60px;
+    right: -40px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff; /* Text color */
+    font-size: 20px;
+    border-bottom: 2px solid #2E7FAC;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder{
+
+    color: hsla(0, 0%, 79%, 0.418); /* Placeholder color */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+
+}
+textarea::placeholder{
+
+    color: hsla(0, 0%, 79%, 0.418); /* Placeholder color */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    transform: translateY(-50%);
+    pointer-events: none; 
+
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none !important;
+}
+input[type="text"]:focus::placeholder,
+    input[type="email"]:focus::placeholder{
+        top: -5px; 
+        
+    }
+    textarea:focus::placeholder {
+        top: -15px; 
+    }
+
+input[type="submit"] {
+    background-image: linear-gradient(#175F88,#2E7FAC,#175F88); /* Darker green on hover */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-image: linear-gradient(to right,hsl(202, 71%, 40%),hsl(201, 58%, 55%),hsl(202, 71%, 40%)); /* Darker green on hover */
+}
+
+@keyframes fade-in{
+    from {scale: 1; opacity: 0.5;}
+    to {scale: 1; opacity: 1;}
+}
+
+/* FOR JAVASCRIPT */
+.transparent-background {
+    background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block; /* Display the burger menu on small screens */
+        height: 30px; /* Set the height of the burger menu */
+        width: auto; /* Allow the width to adjust automatically */
+        /* margin-right: 20%;  */
+    }
+    .navbar {
+        display: none; /* Hide the navbar on small screens */
+    }
+    .tabs{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .tab{
+        width: 60%;
+    }
+    #aboutImage{
+        display: none;
+    }
+    .work{
+        flex-direction: column;
+    }
+}
+
+
+
