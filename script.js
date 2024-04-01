@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lightBtn.style.backgroundColor='transparent';
         lightBtn.style.color='white';
 
+
     });
 
     darkBtn.addEventListener("mouseleave", function() {
@@ -38,28 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
         lightBtn.style.color='black';
     });
 
-    // lightBtn.addEventListener("mouseenter", function() {
-    //     darkBtn.classList.add("light-btn");
-    // });
-
-    // lightBtn.addEventListener("mouseleave", function() {
-    //     darkBtn.classList.remove("light-btn");
-    // });
+   
 });
 
-// const sections = document.querySelectorAll('section');
 
-// sections.forEach(section => {
-//     section.addEventListener('wheel', event => {
-//         event.preventDefault();
-//         const deltaY = event.deltaY;
-//         const sectionIndex = Array.from(sections).indexOf(section);
-//         const nextSection = sections[sectionIndex + (deltaY > 0 ? 1 : -1)];
-//         if (nextSection) {
-//             nextSection.scrollIntoView({ behavior: 'smooth' });
-//         }
-//     });
-// });
 //TELEIES 
 
 // document.addEventListener("DOMContentLoaded", function() {

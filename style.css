@@ -1,13 +1,13 @@
 /* HTML */
-
+*{
+    box-sizing: border-box;
+}
 body, html {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    height: 100%;
     font-family: 'Montserrat Alternates','Poppins',Arial, Helvetica, sans-serif;
     scroll-snap-type: y mandatory; 
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 h1{
@@ -28,10 +28,6 @@ p{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-
-
-       
-   
 }
 
 /* HOMEPAGE - PAGE 1 */
@@ -117,18 +113,7 @@ p{
 
 }
 
-/*TO SCROLL LINE EINAI H GRAMMH PANW AP TO NAVBAR OPOTE THELW TO VGAZW*/
-.scroll-line{
-    height: 10px;
-    background-color: #fdfdfd;
-    width: 100%;
-    position: fixed;
-    top: 5%;
-    z-index: 1000;
-    scale: 0 1;
-    animation: scroll-line linear;
-    animation-timeline: scroll();
-  }
+
 
   @keyframes scroll-line{
     to{scale: 1 1;}
@@ -150,7 +135,14 @@ p{
     flex-direction: row;
     gap: 10px;
 }
-
+#work-btn a{
+    text-decoration: none;
+    color: white;
+}
+#work-btn:hover a{
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
 #work-btn{
     padding:5px 30px;
     border: 2px white solid;
@@ -182,6 +174,8 @@ p{
     cursor: pointer;
 
 }
+
+
 #about-btn:hover{
     padding:5px 30px;
     border: 2px white solid;
@@ -190,6 +184,7 @@ p{
     font-size: 0.8rem;
     border-radius: 8px;
 }
+
 
 .about-page button{
     width: 180px;
@@ -269,7 +264,7 @@ p{
     flex-shrink: 1;
     flex-grow: 1;
     max-width: 50ch;
-    min-width: 300px; *
+    min-width: 300px; 
     color: rgb(241, 241, 241);
 }
 
@@ -482,10 +477,10 @@ form {
     border-radius: 10px;
     backdrop-filter: blur(10px); /* Apply backdrop blur effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    min-width: 300px;    
+    min-width: 200px;    
     max-width: 300px;    
     position: relative;
-    height: 400px;
+    height: 300px;
 }
 form img{
     position: absolute;
@@ -586,7 +581,7 @@ input[type="submit"]:hover {
         flex-wrap: wrap;
     }
     .tab{
-        width: 60%;
+        width: 200px;
     }
     #aboutImage{
         display: none;
@@ -594,6 +589,17 @@ input[type="submit"]:hover {
     .work{
         flex-direction: column;
     }
+    .contact{
+        flex-direction: column;
+    }
+    body{
+        scroll-snap-type: none;
+    }
+    .page{
+        height: auto;
+        scroll-snap-align: none;
+    }
+    
 }
 
 
