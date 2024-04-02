@@ -581,9 +581,7 @@ input[type="submit"]:hover {
         background-image: linear-gradient(to right, rgb(24, 24, 24),rgb(15, 13, 13),rgb(12, 12, 66));
         
     }
-    .page{
-        /* height:fit-content; */
-    }
+    
     #home{
         height: 100vh;
         background-color: black;
