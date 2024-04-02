@@ -41,7 +41,7 @@ p{
 }
 .homepage p{
     position: absolute;
-    bottom: 5%;
+    /* bottom: 5%; */
 }
 
 /* HEADER */
@@ -220,7 +220,7 @@ p{
   /* ABOUT PAGE - PAGE 2 */
 
   .about-page {
-        display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -331,7 +331,7 @@ p{
 }
 .tab:hover .tab-content{
     /* transform: scale(1.05) ; */
-    transform: translateY(-40%);
+    transform: translateY(-50%);
 }
 .tab-content{
     display: flex;
@@ -347,13 +347,13 @@ p{
 }
 
 .tab p{
-    margin: 5px;
+    margin: 0;
     font-size: 0.8rem;
 }
 .tabImage{
     /* width: 180px; */
     height: 65px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     background-size: cover;
 }
 
@@ -567,6 +567,53 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+
+    h1{
+        font-size: 1.5rem;
+    }
+    body,html{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* scroll-snap-type: none;
+        scroll-behavior: auto; */
+        background-image: linear-gradient(to right, rgb(24, 24, 24),rgb(15, 13, 13),rgb(12, 12, 66));
+        
+    }
+    .page{
+        /* height:fit-content; */
+    }
+    #home{
+        height: 100vh;
+        background-color: black;
+    }
+    .homepage{
+        background-size: cover;
+        /* background-image: none; */
+    }
+    .homepage p{
+        display: none;    
+    }
+    .hero-homepage{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position:static;
+        max-width: 350px;
+    }
+    #about-btn a{
+        text-decoration: none;
+    }
+    .header{
+        width: 100%;
+        min-width: 480px;
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+       
+
+    }
     .burger {
         display: block; /* Display the burger menu on small screens */
         height: 30px; /* Set the height of the burger menu */
@@ -575,6 +622,25 @@ input[type="submit"]:hover {
     }
     .navbar {
         display: none; /* Hide the navbar on small screens */
+    }
+    #about{
+        height: 120vh;
+    }
+    .about-page{
+        /* background-image: none; */
+        justify-content: center;
+
+    }
+    .about-hero{
+        margin-top: 40px;
+
+        align-items: center;
+        max-width: 90%;
+
+    }
+    .about-hero p{
+        font-size: 1rem;
+        margin-bottom: 40px;
     }
     .tabs{
         flex-direction: column;
@@ -585,23 +651,70 @@ input[type="submit"]:hover {
     .tab{
         width: 200px;
     }
+    .tab p{
+        font-size: 0.6rem;
+    }
     #aboutImage{
         display: none;
     }
+    #work{
+        height: 100vh;
+    }
     .work{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+
+    }
+    .work h1{
+        margin-left: 0;
+        max-width: 350px;
+    }
+    .work button{
+        margin-left: 0;
+    }
+    .work-hero{
+        align-items: center;
+    }
+    #workImage1{
+        width: 90%;
+    }
+    
+    #workImage2{
+        width: 90%;
+    }
+    #contact{
+        height: 120vh;
     }
     .contact{
         flex-direction: column;
+     }
+     .contact-hero{
+        margin-top: 100px;
+        justify-content: center;
+        width: 80%;
+        padding: 0;
+        align-items: left;
+     }
+   .contact h2{
+        font-size: 1rem;
+   }
+   
+    .contact-hero p{
+        font-size: 1.1rem;
     }
-    body{
-        scroll-snap-type: none;
+    .social img{
+        width: 40px;
     }
-    .page{
-        height: auto;
-        scroll-snap-align: none;
+    .logo{
+        width: 130px;
     }
-    
+
+    form img{
+        display: none;
+    }
+    form{
+        max-width: 80%;
+    }
 }
 
 
