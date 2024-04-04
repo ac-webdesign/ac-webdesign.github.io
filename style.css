@@ -28,6 +28,7 @@ p{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+    /* background-image: url(images/frame.png); */
 }
 
 /* HOMEPAGE - PAGE 1 */
@@ -35,6 +36,8 @@ p{
 
 .homepage {
     background-image: url(images/wallpaperbetter.jpg);
+    /* background-image: url(images/frame.png); */
+
     color: rgb(223, 223, 223);
     background-size: cover;
     
@@ -179,13 +182,14 @@ p{
 }
 #about-btn a{
     text-decoration: none;
+    color: black;
 }
 
 #about-btn:hover{
     padding:5px 30px;
     border: 2px white solid;
-    background-color:transparent;
-    color: rgb(240, 240, 240);
+    background-color:white;
+    color: rgb(0, 0, 0);
     font-size: 0.8rem;
     border-radius: 8px;
 }
@@ -204,7 +208,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1000; /* Ensure indicator is above other content */
+    z-index: 1000; 
   }
   
   .dot {
@@ -214,12 +218,13 @@ p{
     border-radius: 50%;
     margin: 5px 0;
     cursor: pointer;
-    transition: transform 0.5s; /* Smooth transition for scaling */
+    transition: transform 0.5s; 
   }
   
   .dot.active {
-    transform: scale(1.5); /* Make active dot bigger */
+    transform: scale(1.5); 
   }
+  
 
 
   /* ABOUT PAGE - PAGE 2 */
@@ -240,16 +245,13 @@ p{
 /* ABOUT HERO SECTION */
 
 .about-hero{
-    /* background-color: #0f0779; */
     backdrop-filter: blur(2px);
     border-radius: 36px;
     padding: 10px;
-    /* width: 500px; */
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: top;
-    /* margin-left: 10%; */
 }
 
 /* TO KEIMENO MAZI ME THN EIKONA */
@@ -287,6 +289,7 @@ p{
     width: 50px;
     height: 3px;
     margin-right: 10px;
+    border-radius: 32px;
 
 }
 
@@ -336,7 +339,7 @@ p{
 }
 .tab:hover .tab-content{
     /* transform: scale(1.05) ; */
-    transform: translateY(-50%);
+    transform: translateY(-42%);
 }
 .tab-content{
     display: flex;
@@ -346,7 +349,7 @@ p{
     transition: transform 0.5s ease;
 }
 .tab h2{
-    margin: 0;
+    margin-bottom: 10px;
     font-size: 1rem;
 
 }
@@ -358,7 +361,7 @@ p{
 .tabImage{
     /* width: 180px; */
     height: 65px;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
     background-size: cover;
 }
 

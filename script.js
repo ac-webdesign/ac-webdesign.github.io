@@ -65,45 +65,6 @@ icons.forEach(icon => {
 
 //TYPING ANIMATION
 
-            // const text = document.querySelector('.typingAnimation');
-            // // const phrase = text.textContent;
-            // const phrases = ["Building websites","Responsive design","Application development"];
-            // let index = 0;
-            // console.log(phrases[2]);
-
-            
-            // function showLetter() {
-               
-            //         if (index <= phrases[i].length) {
-            //             text.textContent = phrases[i].slice(0, index);
-            //             index++;
-            //             setTimeout(showLetter, 70);
-            //         } else {
-            //             index = phrases[i].length;
-            //             setTimeout(removeLetter, 70);
-            //         }
-            //     }
-                    
-            
-        
-            // function removeLetter() {
-            // if (index >= 0) {
-            //     text.textContent = phrases[i].slice(0, index);
-            //     index--;
-            //     setTimeout(removeLetter, 70);
-            // } else {
-            //     index = 0;
-            //     setTimeout(showLetter, 70);
-            // }
-            // }
-        
-            // showLetter();
-
-
-
-            //paradeigmata 
-
-
 
             const text = document.querySelector('.typingAnimation');
             const phrases = ["Be patient!", "Website is under construction", "@ac.webdesign"];
@@ -137,66 +98,36 @@ icons.forEach(icon => {
         
             showLetter();
 
-//             const text = document.querySelector('.typingAnimation');
-//             const phrases = ["Building websites", "Responsive design", "Application development"];
-//             let index = 0;
-//             let currentPhraseIndex = 0;
 
-//             function showLetter() {
-//                 if (index <= phrases[currentPhraseIndex].length) {
-//                     text.textContent = phrases[currentPhraseIndex].slice(0, index);
-//                     index++;
-//                     setTimeout(showLetter, 100);
-//                 } else {
-//                     index = 0;
-//                      // Move to the next phrase
-//                     setTimeout(removeLetter, 1000); // Delay before erasing
-//                 }
-                
-//             }
-
-//             function removeLetter() {
-//                 if (index >= 0) {
-//                     text.textContent = phrases[currentPhraseIndex].slice(0, index);
-//                     index--;
-//                     setTimeout(removeLetter, 100);
-//                 } else {
-//                     index = 0;
-//                     setTimeout(showLetter, 100);
-//                     currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-//                 }
-//             }
-
-// showLetter();
 //TELEIES 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const dots = document.querySelectorAll(".dot");
+
+    const dots = document.querySelectorAll(".dot");
   
-//     // Function to set active dot based on scroll position
-//     function setActiveDot() {
-//         const currentPage = getCurrentPage();
-//         dots.forEach((dot, index) => {
-//           dot.classList.remove("active");
-//         });
-//         dots[currentPage].classList.add("active");
-//       }
+    // Function to set active dot based on scroll position
+    function setActiveDot() {
+        const currentPage = getCurrentPage();
+        dots.forEach((dot, index) => {
+          dot.classList.remove("active");
+        });
+        dots[currentPage].classList.add("active");
+      }
     
   
-//     // Function to get the current page based on scroll position
-//     function getCurrentPage() {
-//       const scrollPosition = window.scrollY;
-//       const windowHeight = window.innerHeight;
-//       const totalHeight = document.body.clientHeight;
-//       const totalPages = dots.length;
-//       const scrollPercentage = (scrollPosition + windowHeight / 2) / totalHeight;
-//       return Math.floor(scrollPercentage * totalPages);
-//     }
+    // Function to get the current page based on scroll position
+    function getCurrentPage() {
+        // Get the scroll position of the window
+        const scrollPosition = window.scrollY;
+        const pageHeight = window.innerHeight;
+        const currentPageIndex = Math.floor(scrollPosition / pageHeight);
+        return currentPageIndex;
+    }
+
+    const currentPageIndex = getCurrentPage();
+
+    setActiveDot();
   
-//     // Set active dot on initial page load
-//     setActiveDot();
+    // Update active dot on scroll
+    window.addEventListener("scroll", setActiveDot);
   
-//     // Update active dot on scroll
-//     window.addEventListener("scroll", setActiveDot);
-//   });
   
