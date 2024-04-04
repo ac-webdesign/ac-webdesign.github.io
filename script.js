@@ -62,6 +62,112 @@ icons.forEach(icon => {
     });
 });
 
+
+//TYPING ANIMATION
+
+            // const text = document.querySelector('.typingAnimation');
+            // // const phrase = text.textContent;
+            // const phrases = ["Building websites","Responsive design","Application development"];
+            // let index = 0;
+            // console.log(phrases[2]);
+
+            
+            // function showLetter() {
+               
+            //         if (index <= phrases[i].length) {
+            //             text.textContent = phrases[i].slice(0, index);
+            //             index++;
+            //             setTimeout(showLetter, 70);
+            //         } else {
+            //             index = phrases[i].length;
+            //             setTimeout(removeLetter, 70);
+            //         }
+            //     }
+                    
+            
+        
+            // function removeLetter() {
+            // if (index >= 0) {
+            //     text.textContent = phrases[i].slice(0, index);
+            //     index--;
+            //     setTimeout(removeLetter, 70);
+            // } else {
+            //     index = 0;
+            //     setTimeout(showLetter, 70);
+            // }
+            // }
+        
+            // showLetter();
+
+
+
+            //paradeigmata 
+
+
+
+            const text = document.querySelector('.typingAnimation');
+            const phrases = ["Be patient!", "Website is under construction", "@ac.webdesign"];
+            let currentPhraseIndex = 0;
+
+            // const phrase = text.textContent;
+            let index = 0;
+        
+            function showLetter() {
+            if (index <= phrases[currentPhraseIndex].length) {
+                text.textContent = phrases[currentPhraseIndex].slice(0, index);
+                index++;
+                setTimeout(showLetter, 100);
+            } else {
+                index = phrases[currentPhraseIndex].length;
+                setTimeout(removeLetter, 100);
+            }
+            }
+        
+            function removeLetter() {
+            if (index >= 0) {
+                text.textContent = phrases[currentPhraseIndex].slice(0, index);
+                index--;
+                setTimeout(removeLetter, 50);
+            } else {
+                index = 0;
+                setTimeout(showLetter, 50);
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            }
+            }
+        
+            showLetter();
+
+//             const text = document.querySelector('.typingAnimation');
+//             const phrases = ["Building websites", "Responsive design", "Application development"];
+//             let index = 0;
+//             let currentPhraseIndex = 0;
+
+//             function showLetter() {
+//                 if (index <= phrases[currentPhraseIndex].length) {
+//                     text.textContent = phrases[currentPhraseIndex].slice(0, index);
+//                     index++;
+//                     setTimeout(showLetter, 100);
+//                 } else {
+//                     index = 0;
+//                      // Move to the next phrase
+//                     setTimeout(removeLetter, 1000); // Delay before erasing
+//                 }
+                
+//             }
+
+//             function removeLetter() {
+//                 if (index >= 0) {
+//                     text.textContent = phrases[currentPhraseIndex].slice(0, index);
+//                     index--;
+//                     setTimeout(removeLetter, 100);
+//                 } else {
+//                     index = 0;
+//                     setTimeout(showLetter, 100);
+//                     currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+//                 }
+//             }
+
+// showLetter();
 //TELEIES 
 
 // document.addEventListener("DOMContentLoaded", function() {

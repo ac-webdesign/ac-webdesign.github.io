@@ -128,6 +128,9 @@ p{
     position: absolute;
     left: 20%;
 }
+.typingAnimation{
+    height: 40px;
+}
 
 /* HOMEPAGE BUTTONS */
 #buttons{
@@ -172,9 +175,11 @@ p{
     font-size: 0.8rem;
     border-radius: 8px;
     cursor: pointer;
-
+   
 }
-
+#about-btn a{
+    text-decoration: none;
+}
 
 #about-btn:hover{
     padding:5px 30px;
@@ -628,6 +633,12 @@ input[type="submit"]:hover {
         /* background-image: none; */
         justify-content: center;
 
+    }
+    .typingAnimation{
+        height: 70px;
+        width: 200px;
+        display: inline-block;
+        position: relative;
     }
     .about-hero{
         margin-top: 40px;
