@@ -2,22 +2,47 @@
 *{
     box-sizing: border-box;
 }
+
+:root{
+
+    /* COLORS */
+    --dark-bg-color:black;
+    --light-bg-color:white;
+    --dark-color:white;
+    --light-color:black;
+
+    /* FONT */
+    --font-poppins:'Poppins',Arial, Helvetica, sans-serif;
+
+    --heading-fontsize:2rem;
+    --heading-fontweight:400;
+
+    --nav-fontsize:1rem;
+    --nav-fontweight:300;
+
+    --paragraph-fontsize:1rem;
+    --paragraph-fontweight:200;
+
+    --button-fontsize:0.8rem;
+
+}
+
 body, html {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    font-family: var(--font-poppins);
     scroll-snap-type: y mandatory; 
     scroll-behavior:smooth;
 }
 
 h1{
-    font-weight: 300;
-    font-size: 2rem;
-    color: white;
+    font-weight: var(--heading-fontweight);
+    font-size: var(--heading-fontsize);
+    color: var(--dark-color);
 }
 
 p{
-    font-weight: 200;
+    font-weight: var(--paragraph-fontweight);
 }
 
 /* EVERY PAGE */
@@ -29,33 +54,27 @@ p{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    /* background-image: url(images/frame.png); */
 }
 
 /* HOMEPAGE - PAGE 1 */
 
 
 .homepage {
-    background-image: url(images/wallpaperbetter.jpg);
-    /* background-image: linear-gradient(135deg,
-                        black,red,rgb(196, 125, 125),red,black        
-    ); */
-    background-color: rgb(43, 42, 42);
-    color: rgb(223, 223, 223);
+    /* background-image: url(images/wallpaperbetter.jpg); */
+    background-color:var(--dark-bg-color);
+    color:var(--dark-color);
     background-size: cover;
     
 }
-.homepage p{
-    position: absolute;
-    /* bottom: 5%; */
-}
+
 
 /* HEADER */
 
 .header{
     width: 100%;
+    margin: 0;
     height: 80px;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,29 +83,28 @@ p{
     top: 0;
     z-index: 1000; 
     backdrop-filter: blur(10px);
-    gap: 20px; 
-
-}
+  }
 
 .logo{
     width: 150px;
-    margin-left: 40px;
+    position: absolute;
+    left: 10%;
     cursor: pointer;
 }
 
 .navbar{
     display: flex;
     position: absolute;
-    right: 20%;
-    gap: 10px;
+    right: 10%;
+    gap: 20px;
     
 }
 .navbar a{
     padding: 5px 20px;
     background-color:transparent;
-    color: white;
-    font-size: 1rem;
-    font-weight: 300;
+    color:var(--dark-color);
+    font-size: var(--nav-fontsize);
+    font-weight: var(--nav-fontweight);
     text-decoration: none;
     border-radius: 8px;
     position: relative;
@@ -99,31 +117,25 @@ p{
     width: 0;
     height: 2px;
     bottom: 0;
-    left: 1px;
+    left: 10px;
     background-color: transparent;
     transition: width 0.5s ease;
 }
 
 .navbar a:hover::before {
-    background-color: rgb(228, 228, 228); /* Change underline color on hover */
-    width: calc(100% - 1px); /* Expand underline width to 100% minus 1px */
+    background-color: var(--dark-color); 
+    width: calc(100% - 20px); 
     
 }
 
 /* TO BURGER ENERGOPOIEITAI OTAN WIDTH<768PX TO BLEPEIS STA @MEDIA */
 .burger{
     display: none;
-    margin-right: 10%;
+    position: absolute; /*DEN KSERW AN XREIAZETAI*/
+    right: 10%;
     cursor: pointer;
-    position: relative; /*DEN KSERW AN XREIAZETAI*/
 
 }
-
-
-
-  @keyframes scroll-line{
-    to{scale: 1 1;}
-  }
 
   /* HOMEPAGE  HERO SECTION*/
 
@@ -146,61 +158,51 @@ p{
 }
 #work-btn a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color:var(--dark-color);
 }
 #work-btn:hover a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--light-color);
 }
 #work-btn{
     padding:5px 30px;
-    border: 2px rgb(255, 255, 255) solid;
+    border: 2px var(--dark-color) solid;
     background-color: transparent;
-    color: rgb(255, 255, 255);
-    font-size: 0.8rem;
+    font-size: var(--button-fontsize);
     border-radius: 8px;
     cursor: pointer;
 }
 
 #work-btn:hover{
     padding:5px 30px;
-    border: 2px white solid;
-    background-color: white;
-    color: rgb(22, 22, 22);
-    font-size: 0.8rem;
+    border: 2px var(--light-bg-color) solid;
+    background-color:var(--light-bg-color);
     border-radius: 8px;
     cursor: pointer;
-
 }
 
 #about-btn{
     padding:5px 30px;
-    border: 2px white solid;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-size: 0.8rem;
+    border: 2px var(--dark-color) solid;
+    background-color:var(--light-bg-color);
+    font-size:var(--button-fontsize);
     border-radius: 8px;
     cursor: pointer;
    
 }
 #about-btn a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color:var(--light-color);
 }
 
 #about-btn:hover{
-    padding:5px 30px;
-    border: 2px rgb(255, 255, 255) solid;
-    background-color:rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 0.8rem;
+    border: 2px var(--light-bg-color) solid;
+    background-color:var(--light-bg-color);
+    color:var(--light-color);
+    font-size: var(--button-fontsize);
     border-radius: 8px;
 }
 
-
-.about-page button{
-    width: 180px;
-}
 /* TELEIES DEKSIA XREIAZONTAI PROGRAMMATISMO */
 
 .navigation-indicator {
@@ -221,12 +223,12 @@ p{
     border-radius: 50%;
     margin: 5px 0;
     cursor: pointer;
-    transition: transform 0.5s; 
+    transition: transform 0.7s; 
   }
   
   .dot.active {
     transform: scale(1.6); 
-    background-color: white;
+    background-color:var(--dark-color);
   }
   
 
@@ -238,19 +240,14 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(images/background/darkbg-programmer.jpeg);
+    background-image: url(images/background/keyboardbg.jpg);
     background-size: cover;
-    color: white;
-    opacity: 1;
     position: relative;
-
 }
 
 /* ABOUT HERO SECTION */
 
 .about-hero{
-    /* border-radius: 36px; */
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -262,7 +259,6 @@ p{
     width: 80%;
     min-height: 400px;
     max-width: 900px;
-    gap: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -271,21 +267,18 @@ p{
     background-color: rgba(68, 64, 64, 0.2);
     backdrop-filter: blur(25px);
     border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 0 4px 1px rgb(78, 73, 73);
+    padding: 30px;
+    box-shadow: 1px 1px 3px rgba(185, 171, 171, 0.2);
 
 }
 
 
 /* KEIMENO */
 .about-hero p{
-    font-size: 1rem;
-    flex-shrink: 1;
-    flex-grow: 1;
+    font-size: var(--paragraph-fontsize);
     max-width: 50ch;
-    font-weight: 300;
-    min-width: 300px; 
-    color: rgba(255, 255, 255, 0.7);
+    font-weight: var(--paragraph-fontweight);
+    color: var(--dark-color);
 }
 
 /* GRAMMH */
@@ -298,33 +291,29 @@ p{
 }
 .line{
     border: none;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.76);
+    border-bottom: 3px solid var(--dark-color);
     width: 50px;
     height: 3px;
-    margin-right: 10px;
+    margin-right: 8px;
     border-radius: 62px;
-
 }
 
 /* EIKONA */
 #aboutImage{
-    width: 250px;
+    max-width: 250px;
     height: auto;
-    /* margin-right: 0; */
-    padding: 40px;
 }
 
 .about-page button{
-    width: 180px;
-    
+    width: 180px; 
 }
 
-/* 3 STHLES ME KEIMENO - MINIMAL KTL */
+/* 3 TABS ME KEIMENO */
 
 .tabs{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 30px;
     width: 90%;
 }
@@ -332,82 +321,66 @@ p{
 .tab{
     background-color: rgba(24, 17, 17, 0.2);
     backdrop-filter: blur(20px);
-
-    width: 300px;
-    height: 140px;
+    width: 260px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    
-    /* border: 1px solid; */
     transition: transform 0.5s ease;
     cursor: pointer;
     overflow: hidden;
     padding: 12px;
     border-radius: 16px;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
+    /* box-shadow: 0 0 5px var(--dark-color); */
 }
 
 .tab:hover{
     transform: scale(1.05) ;
-    box-shadow: 0 0 15px rgb(133, 133, 133);
-    /* transform: translateY(30%); */
+    box-shadow: 0 0 10px rgb(133, 133, 133);
 }
 .tab:hover .tab-content{
     /* transform: scale(1.05) ; */
-    transform: translateY(-45%);
+    transform: translateY(-40%);
 }
 .tab-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(7%);
+    transform: translateY(8%);
     transition: transform 0.5s ease;
 
 }
 .tab h2{
     margin-bottom: 10px;
     font-size: 1rem;
-
+    color: var(--dark-color);
 }
 
 .tab p{
     margin: 0;
     font-size: 0.8rem;
+    color: var(--dark-color);
 }
 .tabImage{
-    /* width: 180px; */
     height: 65px;
     margin-bottom: 5px;
     background-size: cover;
 }
 
-/* OI YPOLOIPES SELIDES */
-
-.skills-page {
-    background-color: #113f5e;
-    opacity: 0.5; 
-    animation: fade-in linear;
-    animation-timeline: view();/* Initially set opacity to 0 for fade-in effect */
-}
-
 /* WORK PAGE */
 
 .work-page {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(images/wallpaperbetter.jpg);
-    background-size: cover;
-    color: white;
-    opacity: 1;
+    background-color: var(--dark-bg-color);
+    /* background-image: url(images/wallpaperbetter.jpg); */
+    /* background-size: cover; */
     position: relative;
+    color: var(--dark-color);
 }
 .work-hero{
     backdrop-filter: blur(2px);
     border-radius: 36px;
-    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -415,28 +388,29 @@ p{
 }
 /* TO KEIMENO MAZI ME THN EIKONA */
 .work{
-    width: 80%;
-    gap: 0;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
-}
-.work h1{
-    margin-left: 55px;
+    padding: 20px;
 }
 
 .work button{
     width: 180px;
-    margin-left: 55px;
+    color: var(--dark-color);
+}
+.work button:hover{
+    width: 180px;
+    color: var(--light-color);
 }
 #workImage1{
-    width: 646px;
+    width: 520px;
     height: auto;
 }
 #workImage2{
-    width: 646px;
+    width: 520px;
     height: auto;
 }
 
@@ -452,7 +426,7 @@ p{
 }
 .contact{
     width: 80%;
-    min-height: 500px;
+    min-height: 450px;
     max-width: 900px;
     display: flex;
     flex-direction: row;
@@ -460,8 +434,8 @@ p{
     align-items: center;
     margin-bottom: 60px;
     background-color: rgba(209, 200, 200, 0.1);
-    padding-left: 20px;
-    gap: 20px;
+    padding: 20px;
+    gap: 50px;
     border-radius: 8px;
     backdrop-filter: blur(30px);
     /* box-sizing: border-box; */
@@ -472,7 +446,8 @@ p{
 .contact-hero{
     border-radius: 8px;
     padding: 20px;
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -480,29 +455,27 @@ p{
     background-image: linear-gradient(45deg,
     rgba(0, 0, 0, 0.5),rgba(22, 20, 20, 0.5),rgba(0, 0, 0, 0.5)        
 ); 
-    height: 460px;
+    height: 430px;
     margin: 0;
     backdrop-filter: blur(20px);
 }
 .contact h1{
     margin: 0;
-    color:#ebebeb;
-    font-size: 2rem;
-    font-weight: 500;
+    color:var(--dark-color);
+    font-size: var(--heading-fontsize);
+    font-weight: var(--heading-fontweight);
 }
 .contact h2{
-    color:#e2e2e2;
+    color:var(--dark-color);
     margin: 20px 0;
-    font-weight: 300;
+    font-weight: var(--heading-fontweight);
 }
 .contact-hero p{
-    font-size: 0.8rem;
-    font-weight: 300;
+    font-size: var(--paragraph-fontsize);
+    font-weight: var(--paragraph-fontweight);
     max-width: 400px;
-    min-width: 300px;
-    color: rgba(243, 237, 237, 0.611);
-    margin: 0;
-
+    min-width: 200px;
+    color:var(--dark-color);
 }
 
 .socialSection{
@@ -516,23 +489,26 @@ p{
     flex-direction: row;
     gap: 8px;
 }
+
 .icon{
     cursor: pointer;
     width: 30px;
     height: 30px;
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
+}
+.icon:hover{
+    opacity: 1;
 }
 /* FORMA EPIKOINWNIAS */
 
 form {
     background-color:transparent; 
     padding: 20px;
-    border-radius: 8px;
-    /* backdrop-filter: blur(1px);  */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  */
-       
+    margin: 0;
     max-width: 400px;    
     position: relative;
-    height: 460px;
+    height: 430px;
 }
 
 
@@ -540,32 +516,33 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 10px;
+    padding: 10px 30px;
     border: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     background-color: transparent;
-    color: #ffffff; /* Text color */
-    font-size: 20px;
-    border-bottom: 2px solid  rgba(255, 255, 255, 0.3);
+    color:var(--dark-color);
+    font-size: var(--paragraph-fontsize);
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.2);
+}
+textarea{
+    height: 240px;
 }
 input[type="text"]::placeholder,
 input[type="email"]::placeholder{
 
     color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
-    font-size: 16px;
+    font-size: var(--paragraph-fontsize);
     transition: all 0.3s ease;
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none; 
-
 }
 textarea::placeholder{
 
     color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
-    font-size: 16px;
+    font-size: var(--paragraph-fontsize);
     transition: all 0.3s ease;
     position: absolute;
     left: 10px;
@@ -597,9 +574,10 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    margin: 0;
 }
 input[type="submit"]:hover {
-    background-image: linear-gradient(to right, rgb(207, 98, 98),hsl(0, 46%, 65%), rgb(211, 98, 98)); /* Darker green on hover */
+    background-image: linear-gradient(to right, #c21616,hsl(0, 63%, 25%), rgb(202, 43, 43)); /* Darker green on hover */
 }
 
 @keyframes fade-in{
@@ -651,12 +629,9 @@ input[type="submit"]:hover {
     }
     .header{
         width: 100%;
-        min-width: 480px;
         display: flex;
         margin: 0;
         justify-content: space-between;
-       
-
     }
     .burger {
         display: block; /* Display the burger menu on small screens */
