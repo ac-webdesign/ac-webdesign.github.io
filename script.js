@@ -30,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     darkBtn.addEventListener("mouseenter", function() {
         lightBtn.style.backgroundColor='transparent';
-        lightBtn.style.color='white';
+        lightBtn.style.color='black';
         aboutLink.style.color='white';
+        darkBtn.style.color='black';
 
 
     });
@@ -40,9 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
         lightBtn.style.backgroundColor='white';
         lightBtn.style.color='black';
         aboutLink.style.color='black';
+        // darkBtn.style.backgroundColor='red';
 
     });
-
+    // lightBtn.addEventListener('mouseenter',function(){
+    //     lightBtn.style.backgroundColor='red';
+    // })
    
 });
 

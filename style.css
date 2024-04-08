@@ -5,7 +5,7 @@
 body, html {
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat Alternates','Poppins',Arial, Helvetica, sans-serif;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
     scroll-snap-type: y mandatory; 
     scroll-behavior:smooth;
 }
@@ -13,6 +13,7 @@ body, html {
 h1{
     font-weight: 300;
     font-size: 2rem;
+    color: white;
 }
 
 p{
@@ -36,8 +37,10 @@ p{
 
 .homepage {
     background-image: url(images/wallpaperbetter.jpg);
-    /* background-image: url(images/frame.png); */
-
+    /* background-image: linear-gradient(135deg,
+                        black,red,rgb(196, 125, 125),red,black        
+    ); */
+    background-color: rgb(43, 42, 42);
     color: rgb(223, 223, 223);
     background-size: cover;
     
@@ -143,17 +146,17 @@ p{
 }
 #work-btn a{
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 #work-btn:hover a{
     text-decoration: none;
-    color: rgb(12, 12, 12);
+    color: rgb(0, 0, 0);
 }
 #work-btn{
     padding:5px 30px;
-    border: 2px white solid;
+    border: 2px rgb(255, 255, 255) solid;
     background-color: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 0.8rem;
     border-radius: 8px;
     cursor: pointer;
@@ -173,8 +176,8 @@ p{
 #about-btn{
     padding:5px 30px;
     border: 2px white solid;
-    background-color: white;
-    color: rgb(15, 15, 15);
+    background-color: rgb(255, 255, 255);
+    color: black;
     font-size: 0.8rem;
     border-radius: 8px;
     cursor: pointer;
@@ -182,13 +185,13 @@ p{
 }
 #about-btn a{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 #about-btn:hover{
     padding:5px 30px;
-    border: 2px white solid;
-    background-color:white;
+    border: 2px rgb(255, 255, 255) solid;
+    background-color:rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-size: 0.8rem;
     border-radius: 8px;
@@ -222,7 +225,8 @@ p{
   }
   
   .dot.active {
-    transform: scale(1.5); 
+    transform: scale(1.6); 
+    background-color: white;
   }
   
 
@@ -234,7 +238,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(images/wallpaperbetter.jpg);
+    background-image: url(images/background/darkbg-programmer.jpeg);
     background-size: cover;
     color: white;
     opacity: 1;
@@ -245,8 +249,7 @@ p{
 /* ABOUT HERO SECTION */
 
 .about-hero{
-    backdrop-filter: blur(2px);
-    border-radius: 36px;
+    /* border-radius: 36px; */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -257,22 +260,32 @@ p{
 /* TO KEIMENO MAZI ME THN EIKONA */
 .about{
     width: 80%;
+    min-height: 400px;
+    max-width: 900px;
     gap: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    background-color: rgba(68, 64, 64, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 4px 1px rgb(78, 73, 73);
+
 }
+
 
 /* KEIMENO */
 .about-hero p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex-shrink: 1;
     flex-grow: 1;
     max-width: 50ch;
+    font-weight: 300;
     min-width: 300px; 
-    color: rgb(241, 241, 241);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* GRAMMH */
@@ -285,19 +298,19 @@ p{
 }
 .line{
     border: none;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.76);
     width: 50px;
     height: 3px;
     margin-right: 10px;
-    border-radius: 32px;
+    border-radius: 62px;
 
 }
 
 /* EIKONA */
 #aboutImage{
-    width: 200px;
+    width: 250px;
     height: auto;
-    margin-right: 10%;
+    /* margin-right: 0; */
     padding: 40px;
 }
 
@@ -317,7 +330,9 @@ p{
 }
 
 .tab{
-    background-color: hsl(261, 61%, 5%);
+    background-color: rgba(24, 17, 17, 0.2);
+    backdrop-filter: blur(20px);
+
     width: 300px;
     height: 140px;
     display: flex;
@@ -330,16 +345,17 @@ p{
     overflow: hidden;
     padding: 12px;
     border-radius: 16px;
-    box-shadow: 0 0 15px rgb(30, 64, 68);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
 }
+
 .tab:hover{
     transform: scale(1.05) ;
-    box-shadow: 0 0 15px rgb(70, 131, 146);
+    box-shadow: 0 0 15px rgb(133, 133, 133);
     /* transform: translateY(30%); */
 }
 .tab:hover .tab-content{
     /* transform: scale(1.05) ; */
-    transform: translateY(-42%);
+    transform: translateY(-45%);
 }
 .tab-content{
     display: flex;
@@ -347,6 +363,7 @@ p{
     align-items: center;
     transform: translateY(7%);
     transition: transform 0.5s ease;
+
 }
 .tab h2{
     margin-bottom: 10px;
@@ -428,41 +445,64 @@ p{
 
 
 .contact-page {
-    background-image: url(images/wallpaperbetter.jpg);
+    background-image: url(images/background/darkbg-programmer.jpeg);
     background-size: cover;
+    
     
 }
 .contact{
     width: 80%;
-    gap: 80px;
+    min-height: 500px;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 60px;
+    background-color: rgba(209, 200, 200, 0.1);
+    padding-left: 20px;
+    gap: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    /* box-sizing: border-box; */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+
 }
 
 .contact-hero{
-    backdrop-filter: blur(2px);
-    border-radius: 36px;
-    padding: 10px;
-    width: 500px;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: top;
+    align-items: start;
+    justify-content:center;
+    background-image: linear-gradient(45deg,
+    rgba(0, 0, 0, 0.5),rgba(22, 20, 20, 0.5),rgba(0, 0, 0, 0.5)        
+); 
+    height: 460px;
+    margin: 0;
+    backdrop-filter: blur(20px);
 }
 .contact h1{
-    color:#e4e4e4;
+    margin: 0;
+    color:#ebebeb;
+    font-size: 2rem;
+    font-weight: 500;
 }
 .contact h2{
-    color:#dadada;
+    color:#e2e2e2;
+    margin: 20px 0;
+    font-weight: 300;
 }
 .contact-hero p{
-    font-size: 1.2rem;
-    max-width: 500px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    max-width: 400px;
     min-width: 300px;
-    color: rgb(241, 241, 241);
+    color: rgba(243, 237, 237, 0.611);
+    margin: 0;
+
 }
 
 .socialSection{
@@ -478,30 +518,28 @@ p{
 }
 .icon{
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 /* FORMA EPIKOINWNIAS */
 
 form {
-    background-color:rgba(46, 127, 172,0.05); /* Semi-transparent white background */
-    padding: 20px 40px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px); /* Apply backdrop blur effect */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    min-width: 200px;    
-    max-width: 300px;    
+    background-color:transparent; 
+    padding: 20px;
+    border-radius: 8px;
+    /* backdrop-filter: blur(1px);  */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  */
+       
+    max-width: 400px;    
     position: relative;
-    height: 300px;
+    height: 460px;
 }
-form img{
-    position: absolute;
-    top: -60px;
-    right: -40px;
-}
+
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 90%;
+    width: 100%;
     padding: 10px 20px;
     margin-bottom: 10px;
     border: none;
@@ -509,12 +547,12 @@ textarea {
     background-color: transparent;
     color: #ffffff; /* Text color */
     font-size: 20px;
-    border-bottom: 2px solid #2E7FAC;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.3);
 }
 input[type="text"]::placeholder,
 input[type="email"]::placeholder{
 
-    color: hsla(0, 0%, 79%, 0.418); /* Placeholder color */
+    color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
     font-size: 16px;
     transition: all 0.3s ease;
     position: absolute;
@@ -526,7 +564,7 @@ input[type="email"]::placeholder{
 }
 textarea::placeholder{
 
-    color: hsla(0, 0%, 79%, 0.418); /* Placeholder color */
+    color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
     font-size: 16px;
     transition: all 0.3s ease;
     position: absolute;
@@ -552,7 +590,7 @@ input[type="text"]:focus::placeholder,
     }
 
 input[type="submit"] {
-    background-image: linear-gradient(#175F88,#2E7FAC,#175F88); /* Darker green on hover */
+    background-image: linear-gradient(to right, rgb(206, 50, 50),hsl(0, 58%, 55%), rgb(206, 50, 50)); /* Darker green on hover */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -561,7 +599,7 @@ input[type="submit"] {
     width: 100%;
 }
 input[type="submit"]:hover {
-    background-image: linear-gradient(to right,hsl(202, 71%, 40%),hsl(201, 58%, 55%),hsl(202, 71%, 40%)); /* Darker green on hover */
+    background-image: linear-gradient(to right, rgb(207, 98, 98),hsl(0, 46%, 65%), rgb(211, 98, 98)); /* Darker green on hover */
 }
 
 @keyframes fade-in{
@@ -570,9 +608,9 @@ input[type="submit"]:hover {
 }
 
 /* FOR JAVASCRIPT */
-.transparent-background {
+/* .transparent-background {
     background-color: transparent !important;
-}
+} */
 
 @media (max-width: 768px) {
 
@@ -721,9 +759,7 @@ input[type="submit"]:hover {
         width: 130px;
     }
 
-    form img{
-        display: none;
-    }
+  
     form{
         max-width: 80%;
     }
