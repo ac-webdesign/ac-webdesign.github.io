@@ -116,7 +116,7 @@ icons.forEach(icon => {
         });
         dots[currentPage].classList.add("active");
       }
-    
+        
   
     // Function to get the current page based on scroll position
     function getCurrentPage() {
@@ -124,9 +124,10 @@ icons.forEach(icon => {
         const scrollPosition = window.scrollY;
         const pageHeight = window.innerHeight;
         const currentPageIndex = Math.floor(scrollPosition / pageHeight);
+        
+       
         return currentPageIndex;
     }
-
     const currentPageIndex = getCurrentPage();
 
     setActiveDot();

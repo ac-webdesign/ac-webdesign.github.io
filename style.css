@@ -26,7 +26,38 @@
     --button-fontsize:0.8rem;
 
 }
+.bubble{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: 47%;
+    left: 18%;
+    box-shadow: 0 0 50px 120px rgba(255, 255, 255, 0.1);
+    /* border: 3px solid  rgba(233, 233, 233, 0.2); */
+    animation: float 4s infinite; 
+}
+@keyframes float{
+    0%,100%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+@keyframes move {
+    10%{
+        transform: translateX(550px);
+    }
+    25%{
+        transform: translateY(400px) translateX(150px);
+    }
+    50%{
+        transform: translate(800px,500px)  ;
 
+    }
+}
 body, html {
     padding: 0;
     margin: 0;
@@ -64,7 +95,6 @@ p{
     background-color:var(--dark-bg-color);
     color:var(--dark-color);
     background-size: cover;
-    
 }
 
 
@@ -256,16 +286,16 @@ p{
 
 /* TO KEIMENO MAZI ME THN EIKONA */
 .about{
-    width: 80%;
+    width: fit-content;
     min-height: 400px;
     max-width: 900px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-bottom: 40px;
-    background-color: rgba(68, 64, 64, 0.2);
-    backdrop-filter: blur(25px);
+    background-color: rgba(68, 64, 64, 0.1);
+    backdrop-filter: blur(15px);
     border-radius: 16px;
     padding: 30px;
     box-shadow: 1px 1px 3px rgba(185, 171, 171, 0.2);
@@ -300,9 +330,11 @@ p{
 
 /* EIKONA */
 #aboutImage{
-    max-width: 250px;
+    margin: 50px;
+    width: 200px;
     height: auto;
 }
+
 
 .about-page button{
     width: 180px; 
@@ -430,11 +462,11 @@ p{
     max-width: 900px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
     margin-bottom: 60px;
     background-color: rgba(209, 200, 200, 0.1);
-    padding: 20px;
+    padding: 10px;
     gap: 50px;
     border-radius: 8px;
     backdrop-filter: blur(30px);
