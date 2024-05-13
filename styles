@@ -1,0 +1,90 @@
+[33mcommit b326039ffa37e674a74a714b36a4c02314a4b74c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 9 05:32:57 2024 +0300
+
+    some changes
+
+[33mcommit d84e004a8e9a81432793c82b73c9ded97e67ea94[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 9 02:47:01 2024 +0300
+
+    css variables added
+
+[33mcommit 29e252a226e09e7b70f7053371ffc3346289553d[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Mon Apr 8 06:26:47 2024 +0300
+
+    some changes
+
+[33mcommit 1548550846175f1d3b62c76f08399dda0ee509c0[m[33m ([m[1;32mredmode[m[33m)[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Sat Apr 6 20:00:18 2024 +0300
+
+    add logo
+
+[33mcommit 1064195d4b61117b0e5cab72c17a356490e1b2ff[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Thu Apr 4 13:49:27 2024 +0300
+
+    scroll dots added
+
+[33mcommit 1563730e02d4dd65819a798baf1e655de46278b4[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Thu Apr 4 05:58:10 2024 +0300
+
+    add typing animation
+
+[33mcommit 4d492e3cbbb9fa7b98726debaa66aed2de14abd4[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 2 07:02:39 2024 +0300
+
+    style changes
+
+[33mcommit 76efd465d72ed81a08cd7d8e267ab7eab5b2340e[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 2 04:19:27 2024 +0300
+
+    add mobile responsivness
+
+[33mcommit 24c45f6af2fe67c135ba70606755684041a7bb10[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 2 04:17:12 2024 +0300
+
+    mobile @media at 768px
+
+[33mcommit 157c408b645c47d371f1d583c82134e4f164d35a[m[33m ([m[1;32mcontact[m[33m)[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Tue Apr 2 00:24:02 2024 +0300
+
+    social add
+
+[33mcommit e24807ddcdfc3aca1df27f39ad56ca2dbd721515[m
+Merge: 6e88356 9ac6343
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Mon Apr 1 06:11:31 2024 +0300
+
+    readme file
+
+[33mcommit 6e883569891851d5b11fe5df33b9792a2683fbb7[m[33m ([m[1;32mdokime[m[33m)[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Mon Apr 1 05:58:26 2024 +0300
+
+    css changes + buttons
+
+[33mcommit 9ac63439d20dfc3b994514eeb3db57892c380dfa[m
+Author: ac-webdesign <165204940+ac-webdesign@users.noreply.github.com>
+Date:   Mon Apr 1 03:07:25 2024 +0300
+
+    Update README.md
+
+[33mcommit 9a0f27e5d48eeed00c2683e090318a569109c42b[m
+Author: ac-webdesign <ac.masterdesign@gmail.com>
+Date:   Mon Apr 1 03:04:28 2024 +0300
+
+    first commit
+
+[33mcommit 90df0c8fbc1bf672670e8f6a9943f8b6460114fb[m
+Author: ac-webdesign <165204940+ac-webdesign@users.noreply.github.com>
+Date:   Mon Apr 1 02:40:19 2024 +0300
+
+    Initial commit

@@ -1,3 +1,4 @@
+
 /* HTML */
 *{
     box-sizing: border-box;
@@ -331,7 +332,7 @@ p{
 /* EIKONA */
 #aboutImage{
     margin: 50px;
-    width: 200px;
+    width: 350px;
     height: auto;
 }
 
@@ -397,6 +398,137 @@ p{
     height: 65px;
     margin-bottom: 5px;
     background-size: cover;
+}
+
+/* PROJECTS PAGE */
+
+#projects{
+    /* background-color: var(--dark-bg-color); */
+    background-image: url(images/background/keyboardbg.jpg);
+    background-size: cover;
+}
+.projects-container{
+    width: 80%;
+    height: 80vh;
+    background-color: rgba(68, 64, 64, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 1px 1px 3px rgba(185, 171, 171, 0.2);
+    text-align: center;
+}
+
+/* SLIDER */
+
+.slider{
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: visible;
+    border-radius: 32px;
+}
+.slide{
+    height: 600px;
+    text-align: center;
+
+}
+.slide h1{
+    font-size: 1.8rem;
+}
+.slide p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.slide img{
+    width: 400px;
+    height: 300px;
+}
+.slider .slide{
+    width: 100%;
+    display: none;
+    border-radius: 32px;
+}
+.project-btn{
+    color: white;
+    background-color: #cfcfcf83;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    width: 340px;
+    border-radius: 8px;
+}
+.project-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.project-btn:hover{
+    background-color: #bbbbbb42;
+}
+#project1{
+    background-color: red;
+}
+#project2{
+    background-color: green;
+}
+#project3{
+    background-color: white;
+}
+#project4{
+    background-color: blue;
+}
+.slide.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.slider button{
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 20%;
+}
+.slider button:hover{
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(105, 105, 105, 0.2);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 20%;
+}
+.slider button:active{
+    background-color: rgba(105, 105, 105, 0.8);
+}
+.prev{
+    left: -40px;
+    overflow: visible;
+    z-index: 100;
+}
+
+.next{
+    right: -40px;
+}
+
+@keyframes fade {
+
+    from {opacity: .6}
+    to {opacity: 1;}
+    
 }
 
 /* WORK PAGE */
@@ -581,7 +713,6 @@ textarea::placeholder{
     top: 20px;
     transform: translateY(-50%);
     pointer-events: none; 
-
 }
 
 input[type="text"]:focus,
@@ -687,6 +818,9 @@ input[type="submit"]:hover {
         width: 200px;
         display: inline-block;
         position: relative;
+    }
+    .red{
+        color: red;
     }
     .about-hero{
         margin-top: 40px;

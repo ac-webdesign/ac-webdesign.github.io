@@ -1,25 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     let currentPageIndex = 0; // Keep track of the current page index
-
-//     window.addEventListener("wheel", function(event) {
-//         const deltaY = event.deltaY;
-//         const pages = document.querySelectorAll(".page");
-
-//         if (deltaY > 0) {
-//             // If scrolling down and there's a page below, move to the next page
-//             currentPageIndex++;
-//         } else if (deltaY < 0 ) {
-//             // If scrolling up and there's a page above, move to the previous page
-//             currentPageIndex--;
-//         }
-
-//         pages.forEach(function(page, index) {
-//             const distanceFromCurrent = index - currentPageIndex;
-//             page.style.opacity = Math.abs(distanceFromCurrent) < 2 ? 1 : 0; // Set opacity based on current page index and distance from current
-//         });
-//     });
-// });
-
 
 //KOYMPIA WORK KAI ABOUT POY ALLAZOYN XRWMA
 
@@ -44,9 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // darkBtn.style.backgroundColor='red';
 
     });
-    // lightBtn.addEventListener('mouseenter',function(){
-    //     lightBtn.style.backgroundColor='red';
-    // })
+   
    
 });
 
@@ -71,7 +47,7 @@ icons.forEach(icon => {
 
 
             const text = document.querySelector('.typingAnimation');
-            const phrases = ["Be patient!", "Website is under construction", "@ac.webdesign"];
+            const phrases = ["I am Alexander,", "frontend developer", "UX/UI designer"];
             let currentPhraseIndex = 0;
 
             // const phrase = text.textContent;
@@ -135,4 +111,53 @@ icons.forEach(icon => {
     // Update active dot on scroll
     window.addEventListener("scroll", setActiveDot);
   
-  
+
+    //PROJECTS SLIDES 
+
+    const slides = document.querySelectorAll(".slides .slide");
+    let slideIndex =0;
+    let intervalID=null;
+
+
+    document.addEventListener("DOMContentLoaded", initializeSlider); 
+
+    function initializeSlider(){
+
+        if(slides.length>0){
+            slides[slideIndex].classList.add("displaySlide");
+            intervalID=setInterval(nextSlide,5000);
+        }
+    
+    }
+
+    function showSlide(index){
+
+
+            if(index >= slides.length){
+                slideIndex=0;
+            }
+            else if(index<0){
+                slideIndex=slides.length-1;
+            }
+            slides.forEach(slide =>{
+                slide.classList.remove("displaySlide");
+            });
+            slides[slideIndex].classList.add("displaySlide");
+    }
+
+    function prevSlide(){
+        clearInterval(intervalID);
+        slideIndex--;
+        showSlide(slideIndex);
+    }
+
+    function nextSlide(){
+
+        clearInterval(intervalID);
+        slideIndex++;
+        showSlide(slideIndex);
+        intervalID = setInterval(nextSlide, 5000);
+
+
+    }
+    
