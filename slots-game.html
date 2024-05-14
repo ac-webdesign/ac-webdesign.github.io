@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Game</title>
+  <style>
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to left,rgb(29, 29, 85),black);
+    background-size: cover;
+    height: auto;
+}
+h1{
+    color: rgba(226, 226, 226, 0.664);
+}
+
+.slot-container {
+    background-color: rgb(18, 18, 24);
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    width: 340px;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 5px;
+    border-radius: 16px;
+    border: 3px solid #ff5b2a;
+    box-shadow: 0 0 5px #FFC300;
+    animation: blink 0.2s infinite alternate;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .slot {
+    
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-size: cover;
+    box-sizing: border-box; /* Ensure borders are included in width and height */
+    border-radius: 8px;
+  }
+  .winning-square {
+    /* border: 10px solid red; */
+    box-sizing: border-box; 
+   
+        border: 10px solid #ff5b2a; 
+        box-shadow: 0 0 5px #FFC300;
+    animation: blink 0.2s infinite alternate; 
+    }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+  #spin-btn{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-image: linear-gradient(orange,red,orange);    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: black;
+    
+  }
+  #spin-btn:hover{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+background-image: linear-gradient(rgb(255, 176, 31),rgb(255, 60, 60),rgb(255, 190, 70));    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: black;
+  }
+  #spin-btn:active{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+background-image: linear-gradient(rgb(168, 109, 0),rgb(141, 6, 6),rgb(158, 103, 0));    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: black;
+  }
+
+  @keyframes blink {
+    from { border-color: transparent; } /* Start with transparent border */
+    to { border-color: #FFC300; } /* Blink with border color */
+}
+  </style>
+
+</head>
+<body>
+  <div class="slot-container">
+    <div class="row">
+      <div class="slot" id="slot1"></div>
+      <div class="slot" id="slot2"></div>
+      <div class="slot" id="slot3"></div>
+    </div>
+    <div class="row">
+      <div class="slot" id="slot4"></div>
+      <div class="slot" id="slot5"></div>
+      <div class="slot" id="slot6"></div>
+    </div>
+    <div class="row">
+      <div class="slot" id="slot7"></div>
+      <div class="slot" id="slot8"></div>
+      <div class="slot" id="slot9"></div>
+    </div>
+  </div>
+  <button id="spin-btn">Spin</button>
+  <button id="spin-btn"><a href="javascript-projects.html">Back</a></button>
+
+  <script>
+    const symbols = ['images/icons/slot-images/orang.png', 'images/icons/slot-images/axladi.png', 'images/icons/slot-images/fraoula.png', 'images/icons/slot-images/banana.png', 'images/icons/slot-images/lemon.png', 'images/icons/slot-images/mouro.png'];
+
+const spinButton = document.getElementById('spin-btn');
+const slots = document.querySelectorAll('.slot');
+const slotContainer = document.querySelector('.slot-container');
+let isFirstSpin = true;
+
+slotContainer.style.backgroundImage = `url('images/icons/slot-images/bgimage.png')`;
+
+spinButton.addEventListener('click', () => {
+
+  spinButton.disabled = true;
+  
+  if (isFirstSpin) {
+    slotContainer.style.backgroundImage = 'none';
+    slotContainer.style.border = 'none';
+
+    isFirstSpin = false;
+}
+
+removeWinningSquares();
+
+
+slots.forEach(slot => {
+    slot.style.backgroundImage = 'none';
+  });
+
+slots.forEach((slot, index) => {
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * symbols.length);
+      const randomSymbol = symbols[randomIndex];
+      slot.style.backgroundImage = `url(${randomSymbol})`;
+    }, index * 100);
+  });
+  setTimeout(() => {
+    spinButton.disabled = false;
+  }, 900);
+  setTimeout(checkWinning, 900); 
+});
+
+
+function checkWinning() {
+  for (let i = 0; i < 3; i++) {
+    if (checkRow(i)) {
+        highlightRow(i);
+        return;
+    }
+  }
+
+  for (let i = 0; i < 3; i++) {
+    if (checkColumn(i)) {
+        highlightColumn(i);
+        return;
+    }
+  }
+
+  if (checkDiagonal()) {
+    highlightDiagonal();
+    return;
+  }
+
+  
+}
+
+function checkRow(row) {
+  const startIndex = row * 3;
+  const symbolsInRow = [slots[startIndex], slots[startIndex + 1], slots[startIndex + 2]].map(slot => slot.style.backgroundImage);
+  return symbolsInRow.every(symbol => symbol === symbolsInRow[0]);
+}
+
+function checkColumn(column) {
+  const symbolsInColumn = [slots[column], slots[column + 3], slots[column + 6]].map(slot => slot.style.backgroundImage);
+  return symbolsInColumn.every(symbol => symbol === symbolsInColumn[0]);
+}
+
+function checkDiagonal() {
+  const symbolsInDiagonal1 = [slots[0], slots[4], slots[8]].map(slot => slot.style.backgroundImage);
+  const symbolsInDiagonal2 = [slots[2], slots[4], slots[6]].map(slot => slot.style.backgroundImage);
+  return symbolsInDiagonal1.every(symbol => symbol === symbolsInDiagonal1[0]) || symbolsInDiagonal2.every(symbol => symbol === symbolsInDiagonal2[0]);
+}
+
+function highlightRow(row) {
+    const startIndex = row * 3;
+    for (let i = startIndex; i < startIndex + 3; i++) {
+      slots[i].classList.add('winning-square');
+    }
+  }
+  
+  function highlightColumn(column) {
+    for (let i = column; i <= column + 6; i += 3) {
+      slots[i].classList.add('winning-square');
+    }
+  }
+  
+
+function highlightDiagonal() {
+    const symbolsInDiagonal1 = [slots[0], slots[4], slots[8]].map(slot => slot.style.backgroundImage);
+    if (symbolsInDiagonal1.every(symbol => symbol === symbolsInDiagonal1[0])) {
+      for (let i = 0; i < 3; i++) {
+        slots[i * 4].classList.add('winning-square'); 
+      }
+      return;
+    }
+  
+    const symbolsInDiagonal2 = [slots[2], slots[4], slots[6]].map(slot => slot.style.backgroundImage);
+    if (symbolsInDiagonal2.every(symbol => symbol === symbolsInDiagonal2[0])) {
+      for (let i = 0; i < 3; i++) {
+        slots[i * 2 + 2].classList.add('winning-square');
+      }
+      return;
+    }
+  }
+  
+
+  function removeWinningSquares() {
+    slots.forEach(slot => {
+      slot.classList.remove('winning-square');
+    });
+  }
+  </script>
+</body>
+</html>

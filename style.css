@@ -294,7 +294,7 @@ p{
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background-color: rgba(68, 64, 64, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 16px;
@@ -302,8 +302,28 @@ p{
     box-shadow: 1px 1px 3px rgba(185, 171, 171, 0.2);
 
 }
-
-
+.about-skills{
+    max-width: 900px;
+    height: 80px;
+    background-color:transparent;
+    border-radius: 16px;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.about-h2{
+    color: white;
+    margin: 10px 0 0 0;
+}
+.about-skills img{
+    width: 50px;
+    height: 40px;
+}
+.about-skills img:hover{
+    transform: scale(1.05);
+}
 /* KEIMENO */
 .about-hero p{
     font-size: var(--paragraph-fontsize);
@@ -417,6 +437,10 @@ p{
     box-shadow: 1px 1px 3px rgba(185, 171, 171, 0.2);
     text-align: center;
 }
+.projects-container h1{
+    font-size: 2.7rem;
+    font-weight: 400;
+}
 
 /* SLIDER */
 
@@ -459,6 +483,10 @@ p{
     width: 340px;
     border-radius: 8px;
 }
+.project-btn a{
+    text-decoration: none;
+    color: white;
+}
 .project-buttons{
     display: flex;
     flex-direction: column;
@@ -469,18 +497,13 @@ p{
 .project-btn:hover{
     background-color: #bbbbbb42;
 }
-#project1{
-    background-color: red;
+.right-section-wakamo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#project2{
-    background-color: green;
-}
-#project3{
-    background-color: white;
-}
-#project4{
-    background-color: blue;
-}
+
 .slide.displaySlide{
     display: block;
     animation-name: fade;
@@ -536,15 +559,14 @@ p{
 .work-page {
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-bg-color);
-    /* background-image: url(images/wallpaperbetter.jpg); */
+    /* background-color: var(--dark-bg-color); */
+    background-image: url(images/wallpaperbetter.jpg);
     /* background-size: cover; */
     position: relative;
     color: var(--dark-color);
 }
+
 .work-hero{
-    backdrop-filter: blur(2px);
-    border-radius: 36px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -559,6 +581,9 @@ p{
     align-items: center;
     margin-bottom: 60px;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
 }
 
 .work button{
@@ -578,7 +603,78 @@ p{
     height: auto;
 }
 
+/* JAVASCRIPT PROJECTS  */
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.5s ease;
+}
+.thumbnail:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 2px black;
+}
+.thumbnail-memory{
+    background-image: url(images/icons/memorygame.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+}
+.thumbnail-slots{
+    background-image: url(images/icons/slot7.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+}
+.thumbnail-roulette{
+    background-image: url(images/icons/roulette.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail a{
+    text-decoration: none;
+    color: rgba(219, 219, 219, 0.753);
+    width: 150px;
+}
+/* Styles for popup content */
+.popup-content {
+    padding: 20px;
+}
+.thumbnails{
 
+    display: flex;
+}
+.javascript-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--dark-bg-color); */
+    background-image: url(images/wallpaperbetter.jpg);
+    /* background-size: cover; */
+    position: relative;
+    color: var(--dark-color);
+}
+.javascript-projects{
+    height: 200px;
+}
+
+#popup1{
+    height: 900px;
+    width: 500px;
+}
 /* CONTACT  PAGE*/
 
 

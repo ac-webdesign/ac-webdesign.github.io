@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Example</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="javascript-projects.css">
+
+</head>
+<body>
+    <div class="header">
+            
+            <img src="images/logo.png" class="logo">
+            <div class="navbar">
+                
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <img src="images/BURGER MENU.png" class="burger">
+    </div>
+
+    <div class="page javascript-page">
+        <h1>Javascript Projects</h1>
+        <div class="work javascript-projects">
+            
+            <div class="thumbnails">
+                <div class="thumbnail" id="thumbnail1" >
+                    <div class="thumbnail-memory" onclick="openMemoryWindow()"></div>
+                    <a href="memory-game.html">Memory game</a>
+                </div>
+                <div class="thumbnail" id="thumbnail2" >
+                    <div class="thumbnail-slots" onclick="openSlotsWindow()"></div>
+                    <a href="slots-game.html">Slots game</a>
+                </div>
+                <div class="thumbnail" id="thumbnail3" >
+                    <div class="thumbnail-roulette" onclick="openRouletteWindow()"></div>
+                    <a href="roulette.html">Roulette</a>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+<!-- Thumbnails -->
+
+
+<!-- Hidden popup content -->
+<div class="popup-content" id="popup1" style="display: none;">
+    <!-- Content for memory game -->
+    <div class="memory-game-container">
+        <h1>Memory game</h1>
+        <div class="memory-game" >
+            <div class="cards-grid">
+            </div>
+        </div>
+        <button id="restart-btn">Restart Game</button>
+    </div>
+</div>
+<div class="popup-content" id="popup2" style="display: none;">
+    <!-- Content for popup 2 -->
+    <h2>Popup 2 Content</h2>
+    <p>This is the content of Popup 2</p>
+</div>
+
+<script src="javascript-projects.js"></script>
+</body>
+</html>
