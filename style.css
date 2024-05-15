@@ -1045,6 +1045,13 @@ input[type="text"],
     height: 100px;
     margin: 0;
 }
+.contact{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.basicContact{
+align-items: center;}
 .calcmycrypto p{
     width: 350px;
 }
