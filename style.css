@@ -271,7 +271,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(images/background/keyboardbg.jpg);
+    /* background-image: url(images/background/keyboardbg.jpg); */
     background-size: cover;
     position: relative;
 }
@@ -424,7 +424,7 @@ p{
 
 #projects{
     /* background-color: var(--dark-bg-color); */
-    background-image: url(images/background/keyboardbg.jpg);
+    /* background-image: url(images/background/keyboardbg.jpg); */
     background-size: cover;
 }
 .projects-container{
@@ -644,6 +644,14 @@ p{
     background-size: cover;
     border-radius: 50%;
 }
+.thumbnail-millionaire{
+    background-image: url(images/icons/millionaire.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
 .thumbnail a{
     text-decoration: none;
     color: rgba(219, 219, 219, 0.753);
@@ -662,7 +670,7 @@ p{
     align-items: center;
     justify-content: center;
     /* background-color: var(--dark-bg-color); */
-    background-image: url(images/wallpaperbetter.jpg);
+    /* background-image: url(images/wallpaperbetter.jpg); */
     /* background-size: cover; */
     position: relative;
     color: var(--dark-color);
@@ -679,7 +687,7 @@ p{
 
 
 .contact-page {
-    background-image: url(images/background/darkbg-programmer.jpeg);
+    /* background-image: url(images/background/darkbg-programmer.jpeg); */
     background-size: cover;
     
     

@@ -31,3 +31,8 @@ function openRouletteWindow(){
     window.open('roulette.html', '_blank');
 
 }
+
+function openMillionaireWindow(){
+    window.open('quiz-game.html', '_blank');
+
+}

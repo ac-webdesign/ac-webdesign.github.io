@@ -21,7 +21,6 @@
           <img src="images/BURGER MENU.png" class="burger">
     </div>
     <div id="home" class="page homepage">
-        <!-- <div class="scroll-line"></div> -->
         
         <div class="hero-homepage">
             <h1 class="typingAnimation"></h1>
@@ -33,7 +32,6 @@
                 <a href="#home" class="dot"></a>
                 <a href="#about" class="dot"></a>
                 <a href="#projects" class="dot"></a>
-                <a href="#work" class="dot"></a>
                 <a href="#contact" class="dot"></a>
             </div>
         </div>
@@ -49,15 +47,7 @@
                 </div>
                 <p>My name is Alexander, a frontend developer creating smooth and minimalistic websites and applications. With a bachelor's degree in telecommunications science and technology, I bring a unique blend of technical knowledge and creative spirit to any project I take on.</p>
                 <button id="work-btn"><a href="#projects">See my work</a></button>
-                <!-- <h2 class="about-h2">Skills i learn:</h2>
-                <div class="about-skills">
-                    <img src="images/icons/html.png">
-                    <img src="images/icons/css-icon 1.png">
-                    <img src="images/icons/javascript.png">
-                    <img src="images/icons/shopify.png">
-                    <img src="images/icons/bootstrap-5-logo-icon 1.png">
-                    <img src="images/icons/figma-icon 1.png">
-                </div> -->
+                
             </div>
         
                 <img src="images/icons/skillsimage2.png" id="aboutImage">
@@ -168,10 +158,67 @@
         </div>
     </div>
 
-    <!-- <div class="page skills-page" id="skills">
-        <h1>Skills</h1>
-        <p>Scroll up to go back</p>
-    </div> -->
+  
+    <script src="three.min.js"></script>
+    <script src="vanta.net.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        VANTA.NET({
+        el: "#contact",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xfd0000,
+        backgroundColor: 0x101011,
+        points: 5.00,
+        spacing: 14.00
+    })
+    VANTA.NET({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xfd5600,
+        backgroundColor: 0x101011,
+        points: 5.00,
+        spacing: 14.00
+    })
+    VANTA.NET({
+        el: "#projects",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xfd5600,
+        backgroundColor: 0x101011,
+        points: 5.00,
+        spacing: 14.00
+    })
+    VANTA.NET({
+        el: "#about",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xfd5600,
+        backgroundColor: 0x101011,
+        points: 5.00,
+        spacing: 14.00
+    })
+    </script>
 </body>
 </html>
