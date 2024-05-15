@@ -27,38 +27,7 @@
     --button-fontsize:0.8rem;
 
 }
-.bubble{
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    top: 47%;
-    left: 18%;
-    box-shadow: 0 0 50px 120px rgba(255, 255, 255, 0.1);
-    /* border: 3px solid  rgba(233, 233, 233, 0.2); */
-    animation: float 4s infinite; 
-}
-@keyframes float{
-    0%,100%{
-        transform: translateY(-20px);
-    }
-    50%{
-        transform: translateY(20px);
-    }
-}
-@keyframes move {
-    10%{
-        transform: translateX(550px);
-    }
-    25%{
-        transform: translateY(400px) translateX(150px);
-    }
-    50%{
-        transform: translate(800px,500px)  ;
 
-    }
-}
 body, html {
     padding: 0;
     margin: 0;
@@ -173,8 +142,7 @@ p{
   .hero-homepage{
     display: flex;
     flex-direction: column;
-    align-items: left;
-    position: absolute;
+    position: absolute; 
     left: 20%;
 }
 .typingAnimation{
@@ -403,6 +371,15 @@ p{
     transition: transform 0.5s ease;
 
 }
+.tab ul{
+    margin: 0;
+    padding: 1px 0 0 0;
+    
+}
+.tab li{
+    color: white;
+    font-size: 0.7rem;
+}
 .tab h2{
     margin-bottom: 10px;
     font-size: 1rem;
@@ -412,7 +389,8 @@ p{
 .tab p{
     margin: 0;
     font-size: 0.8rem;
-    color: var(--dark-color);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.61);
 }
 .tabImage{
     height: 65px;
@@ -475,10 +453,11 @@ p{
 }
 .project-btn{
     color: white;
-    background-color: #cfcfcf83;
+    background-color: transparent;
+    border: 2px solid white;
     cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 300;
     margin: 0;
     width: 340px;
     border-radius: 8px;
@@ -486,6 +465,10 @@ p{
 .project-btn a{
     text-decoration: none;
     color: white;
+}
+.project-btn a:hover{
+    color: black;
+
 }
 .project-buttons{
     display: flex;
@@ -495,7 +478,8 @@ p{
     gap: 8px;
 }
 .project-btn:hover{
-    background-color: #bbbbbb42;
+    background-color: #ffffff;
+    color: black;
 }
 .right-section-wakamo{
     display: flex;
@@ -664,6 +648,7 @@ p{
 .thumbnails{
 
     display: flex;
+    flex-wrap: wrap;
 }
 .javascript-page {
     display: flex;
@@ -694,56 +679,48 @@ p{
 }
 .contact{
     width: 80%;
-    min-height: 450px;
-    max-width: 900px;
+    /* height: 400px; */
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 20px;
+    color: whitesmoke; 
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
     display: flex;
+    gap: 30px;
     flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    margin-bottom: 60px;
-    background-color: rgba(209, 200, 200, 0.1);
-    padding: 10px;
-    gap: 50px;
-    border-radius: 8px;
-    backdrop-filter: blur(30px);
-    /* box-sizing: border-box; */
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    justify-content: space-around;
 
 }
-
-.contact-hero{
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-    min-width: 300px;
+.basicContact{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.sideContact{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content:center;
-    background-image: linear-gradient(45deg,
-    rgba(0, 0, 0, 0.5),rgba(22, 20, 20, 0.5),rgba(0, 0, 0, 0.5)        
-); 
-    height: 430px;
-    margin: 0;
-    backdrop-filter: blur(20px);
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+    border-radius: 0 16px 16px 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0));
 }
-.contact h1{
-    margin: 0;
-    color:var(--dark-color);
-    font-size: var(--heading-fontsize);
-    font-weight: var(--heading-fontweight);
+.contact button {
+    display: block;
+    width: 320px;
+    padding: 10px;
+    background-color: #ff00008e;
+    color: #ffffffb4;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.contact h2{
-    color:var(--dark-color);
-    margin: 20px 0;
-    font-weight: var(--heading-fontweight);
-}
-.contact-hero p{
-    font-size: var(--paragraph-fontsize);
-    font-weight: var(--paragraph-fontweight);
-    max-width: 400px;
-    min-width: 200px;
-    color:var(--dark-color);
+.contact button:hover{
+    background-color: #ff0000ad;
+    color: white;
 }
 
 .socialSection{
@@ -758,95 +735,97 @@ p{
     gap: 8px;
 }
 
-.icon{
+
+
+.contact p{
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.799);
+    
+}
+.contact span{
+    font-size: 1.5rem;
+}
+.contact h4{
+    display: flex;
+    gap: 8px;
+    font-size: 0.7rem;
+    align-items: center;
+    font-weight: 400;
+    margin: 0;
+}
+.contact h4:hover{
+    color: rgba(255, 255, 255, 0.664);
     cursor: pointer;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.icon{
     width: 30px;
-    height: 30px;
-    opacity: 0.2;
-    transition: opacity 0.5s ease;
+    opacity: 0.5;
 }
 .icon:hover{
     opacity: 1;
+    cursor: pointer;
+}
+.contact h3{
+    margin: 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.829);
 }
 /* FORMA EPIKOINWNIAS */
 
-form {
-    background-color:transparent; 
-    padding: 20px;
-    margin: 0;
-    max-width: 400px;    
-    position: relative;
-    height: 430px;
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 
 input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px 30px;
-    border: none;
-    /* border-radius: 5px; */
-    background-color: transparent;
-    color:var(--dark-color);
-    font-size: var(--paragraph-fontsize);
-    border-bottom: 1px solid  rgba(255, 255, 255, 0.2);
-}
-textarea{
-    height: 240px;
-}
-input[type="text"]::placeholder,
-input[type="email"]::placeholder{
+            input[type="email"],
+            textarea {
+                width: 300px;
+                padding: 10px;
+                color: white;
+                margin: 0;
+                border-radius: 4px;
+                background-color: rgba(0, 0, 0, 0.05);
+                border: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.308);
+            }
+            input::placeholder{
+                color: rgba(255, 255, 255, 0.555);
+                font-size: 0.8rem;
+                font-family: 'Poppins';
+                font-weight: 300;
+                position: relative;
+                transition: all 0.3s ease;
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none; 
 
-    color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
-    font-size: var(--paragraph-fontsize);
-    transition: all 0.3s ease;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; 
-}
-textarea::placeholder{
+            }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            textarea:focus {
+                outline: none !important;
+            }
+            input[type="text"]:focus::placeholder,
+            input[type="email"]:focus::placeholder{
 
-    color: hsla(0, 0%, 100%, 0.7); /* Placeholder color */
-    font-size: var(--paragraph-fontsize);
-    transition: all 0.3s ease;
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    transform: translateY(-50%);
-    pointer-events: none; 
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    outline: none !important;
-}
-input[type="text"]:focus::placeholder,
-    input[type="email"]:focus::placeholder{
-        top: -5px; 
-        
-    }
-    textarea:focus::placeholder {
-        top: -15px; 
-    }
-
-input[type="submit"] {
-    background-image: linear-gradient(to right, rgb(206, 50, 50),hsl(0, 58%, 55%), rgb(206, 50, 50)); /* Darker green on hover */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin: 0;
-}
-input[type="submit"]:hover {
-    background-image: linear-gradient(to right, #c21616,hsl(0, 63%, 25%), rgb(202, 43, 43)); /* Darker green on hover */
-}
-
+                top: -25px;  
+                overflow: visible;   
+            }
+            textarea:focus::placeholder {
+                top: -15px; 
+            }
 @keyframes fade-in{
     from {scale: 1; opacity: 0.5;}
     to {scale: 1; opacity: 1;}
@@ -1008,4 +987,72 @@ input[type="submit"]:hover {
     form{
         max-width: 80%;
     }
+}
+
+
+@media (max-width: 550px) {
+   
+    .hero-homepage{
+        
+        left: 0%;
+    }
+   .slide img{
+    width: 200px;
+    height: 200px;
+   }
+   .about{
+    text-align: center;
+    padding: 0;
+    height: 200px;
+    justify-content: center;
+   }
+   .about-hero{
+        margin-top: 0;
+   }
+   .about-hero h1{
+    margin: 0;
+   }
+   .tab{
+    width: 100%;
+    height: 120px;
+    padding: 0;
+    justify-content: center;
+}
+   .tab-content{
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    transform: none;
+    transition: none;
+   }
+   .tab h2{
+    display: none;
+   }
+   .tab p{
+    width: 200px;
+   }
+   .tab:hover{
+    transform: none ;
+    box-shadow: 0 0 10px rgb(133, 133, 133);
+}
+.tab:hover .tab-content{
+    /* transform: scale(1.05) ; */
+    transform: none;
+}
+.slider button{
+    height: 100px;
+    margin: 0;
+}
+.calcmycrypto p{
+    width: 350px;
+}
+.calcmycrypto img{
+    margin-top: 200px;
+}
+.javascript-projects{
+    height: 400px;
+    flex-wrap: wrap;
+}
 }

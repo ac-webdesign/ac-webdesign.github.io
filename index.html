@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Ch Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+
 </head>
 <body>
     <!-- <div class="bubble"></div> -->
     <div class="header">
         
-        <img src="images/logo.png" class="logo">
+        <img src="images/logo.png" class="logo" >
         <div class="navbar">
             
             <a href="#home">Home</a>
@@ -41,12 +43,14 @@
     <div id = "about" class="page about-page">
         <div class="about">
             <div class="about-hero">
-                <div class="about-line">
-                    <!-- <div class="line"></div> -->
+                
                     <h1>ABOUT ME</h1>
-                </div>
-                <p>My name is Alexander, a frontend developer creating smooth and minimalistic websites and applications. With a bachelor's degree in telecommunications science and technology, I bring a unique blend of technical knowledge and creative spirit to any project I take on.</p>
-                <button id="work-btn"><a href="#projects">See my work</a></button>
+                
+                <p>My name is Alexander, a frontend developer, and my main goal is creating user friendly, modern 
+                    and minimalistic websites and applications. With a bachelor's degree in telecommunications science and technology, 
+                    I have developed a well-rounded skillset of technical 
+                    knowledge- and I excel at putting forward fresh and innovative ideas.</p>
+                <button id="work-btn"><a href="#projects">See my projects</a></button>
                 
             </div>
         
@@ -56,7 +60,30 @@
         </div>
         
         <div class="tabs">
+            <div class="tab">
+                <div class="tab-content">
+                    <img src="images/creativevision.png" class="tabImage">
+                    <h2>skills</h2>
+                    <ul>
+                        <li>HTML/HTML5</li>
+                        <li>CSS/CSS3</li>
+                        <li>JAVASCRIPT</li>
+                        <li>CURRENTLY LEARNING REACT.JS</li>
+                        <li>GIT</li>
+                        <li>Design tools : FIGMA</li>
 
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab">
+                <div class="tab-content">
+                    <img src="images/technicalknowledge.png" class="tabImage">
+                    <h2>technical proficiency</h2>
+                    <p> With a strong foundation in telecommunications, I bring a deep understanding of networking principles, allowing me to optimize website performance and reliability.
+                    </p>
+                </div>
+            </div>
             <div class="tab">
                 <div class="tab-content">
                     <img src="images/minimalism.png" class="tabImage">
@@ -64,22 +91,6 @@
                     <p> I believe in the power of simplicity to enhance the user experience. The minimalist design not only looks elegant and modern, but also prioritizes clarity and functionality.</p>
                 </div>
 
-            </div>
-            <div class="tab">
-                <div class="tab-content">
-                    <img src="images/technicalknowledge.png" class="tabImage">
-                    <h2>technical proficiency</h2>
-                    <p> With a strong foundation in telecommunications, I bring a deep understanding of networking principles and data transmission, allowing me to optimize website performance and reliability.
-                    </p>
-                </div>
-            </div>
-            <div class="tab">
-                <div class="tab-content">
-                    <img src="images/creativevision.png" class="tabImage">
-                    <h2>creative vision</h2>
-                    <p> I approach each project with a keen eye for aesthetics and a commitment to delivering designs that not only look beautiful but also resonate with the target audience.
-                    </p>
-                </div>
             </div>
         </div>
         
@@ -130,30 +141,33 @@
     
     <div id="contact" class="page contact-page">
         <div class="contact">
-            <div class="contact-hero">
+            <div class="sideContact">
+                <h3>Personal Info</h3>
+                <p>Feel free to contact me any time. 
+                    I will get back to you as soon as possible.</p>
                 
-                <h1>CONTACT ME</h1>
-                
-                <p>I am available to discuss all aspects of your project, 
-                    define your goals and needs, and collaborate on the 
-                    implementation and growth of the project.</p>
-                <div class="socialSection">
-                    <h2>Social media:</h2>
-                    <div class="social">
-                        <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok" data-link="https://www.tiktok.com/@ac.webdesign">
-                        <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" data-link="https://www.youtube.com/channel/UCjdNqZP8BFaNQNPiiW1oALQ">
-                        <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
-                        <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram" data-link="https://www.instagram.com/ac.webdesignn/">
-                    </div>
+                <div class="info">
+                    <h4><span>✉️</span> ac.masterdesign@gmail.com</h4>
+                    <h4><span>📞</span> +30 699 20 44 914</h4>
+                    <h4><span>🌏</span> https://ac-webdesign.github.io/</h4>
+                </div>
+                <div class="social">
+                    <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok" data-link="https://www.tiktok.com/@ac.webdesign">
+                    <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" data-link="https://www.youtube.com/channel/UCjdNqZP8BFaNQNPiiW1oALQ">
+                    <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                    <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram" data-link="https://www.instagram.com/ac.webdesignn/">
                 </div>
             </div>
-           
-                <form>
-                    <input type="text" id="name" placeholder="name" required>
-                    <input type="email" id="email" placeholder="e-mail" required>
-                    <textarea required cols="30" rows="10" placeholder="Say hello :)"></textarea>
-                    <input type="submit" value="Send">
+            
+            <div class="basicContact">
+                <h2>Contact me</h2>
+                <form action="send_email.php" method="post">
+                    <input type="text" id="name" name="name" required placeholder="Name">
+                    <input type="email" id="email" name="email" required placeholder="E-mail">
+                    <textarea id="message" name="message" rows="5" required style="resize: none;"></textarea>
+                    <button type="submit">Submit</button>
                 </form>
+            </div>
            
         </div>
     </div>
@@ -184,12 +198,12 @@
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
-        scale: 1.00,
+        scale: 0.80,
         scaleMobile: 1.00,
         color: 0xfd5600,
         backgroundColor: 0x101011,
         points: 5.00,
-        spacing: 14.00
+        spacing: 12.00
     })
     VANTA.NET({
         el: "#projects",

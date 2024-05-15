@@ -36,3 +36,4 @@ function openMillionaireWindow(){
     window.open('quiz-game.html', '_blank');
 
 }
+
