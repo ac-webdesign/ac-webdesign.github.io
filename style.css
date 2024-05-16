@@ -465,6 +465,7 @@ p{
 .project-btn a{
     text-decoration: none;
     color: white;
+    padding: 0 80px ;
 }
 .project-btn a:hover{
     color: black;
@@ -648,7 +649,6 @@ p{
 .thumbnails{
 
     display: flex;
-    flex-wrap: wrap;
 }
 .javascript-page {
     display: flex;
@@ -664,10 +664,6 @@ p{
     height: 200px;
 }
 
-#popup1{
-    height: 900px;
-    width: 500px;
-}
 /* CONTACT  PAGE*/
 
 
@@ -1060,6 +1056,11 @@ align-items: center;}
 }
 .javascript-projects{
     height: 400px;
+    flex-wrap: wrap;
+}
+.thumbnails{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 }
