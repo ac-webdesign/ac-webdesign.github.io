@@ -1,19 +1,20 @@
 # Hello, I'm Alexander!
 
-Welcome to my GitHub profile. I'm a web designer and developer passionate about creating beautiful and functional websites. 
+Welcome to my GitHub profile. I'm a Frontend Developer passionate about creating beautiful and functional websites. 
 Here you'll find some of my projects and contributions.
 
 ## About Me
 
 - **Name:** Alexander
 - **Location:** Greece
-- **Profession:** Web Designer & Developer
+- **Profession:** Frontend Developer - UI/UX
 
 ## Skills
 
 - HTML
 - CSS
 - JavaScript
+- React js
 - Responsive Web Design
 - UX/UI Design
 
