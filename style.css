@@ -987,7 +987,81 @@ input[type="text"],
 
 
 @media (max-width: 550px) {
-   
+    body{
+      transition: transform 0.3s ease;
+    }
+    .nav-menu{
+        position: fixed;
+        height: 100vh;
+        width: 340px;
+        background-color: hsla(0, 0%, 86%, 0.5);
+        right: -100%;
+        z-index: 999;
+        backdrop-filter: blur(16px);
+        transition: right 0.3s ease; /* Smooth transition for sliding in */
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        position: fixed;
+        top: 20%;
+        right: 0;
+        gap: 28px;
+
+    }
+    .navbar-mobile a{
+        text-decoration: none;
+        color: white;
+        font-size: 2.8rem;
+        background-color:transparent;
+        width: 340px;
+        padding-left: 50px;
+
+    }
+    .navbar-mobile a:hover{
+        text-shadow: 2px 2px rgb(44, 44, 44);
+        background-color: #bbb;
+    }
+    
+    .burger-menu {
+        width: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000; /* Ensures the burger menu is above other elements */
+      }
+     
+      .bar {
+        width: 100%;
+        height: 4px;
+        background-color: rgb(202, 202, 202);
+        margin: 5px 0;
+        transition: all 0.3s ease; /* Smooth transition for the transformation */
+      }
+      .burger-menu.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); /* Top bar transforms to part of X */
+      }
+  
+      .burger-menu.open .bar:nth-child(2) {
+        opacity: 0; /* Middle bar disappears */
+      }
+  
+      .burger-menu.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px); /* Bottom bar transforms to part of X */
+      }
+      #nav-menu.open {
+        right: 0; /* Slides in the nav menu */
+      }
+      
+      .navbar-mobile .social{
+        padding-left: 50px;
+      }
+
     .hero-homepage{
         
         left: 0%;
@@ -1063,4 +1137,5 @@ align-items: center;}
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 }

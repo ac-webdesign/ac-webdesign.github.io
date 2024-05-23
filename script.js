@@ -30,17 +30,17 @@ document.addEventListener("DOMContentLoaded", function() {
 //SOCIAL ICONS LINKS TO NEW TAB
 
 
-const icons = document.querySelectorAll('.icon');
+            const icons = document.querySelectorAll('.icon');
 
-// Add click event listener to each icon
-icons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        // Get the data-link attribute value
-        const link = icon.getAttribute('data-link');
-        // Open the link in a new tab
-        window.open(link, '_blank');
-    });
-});
+            // Add click event listener to each icon
+            icons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    // Get the data-link attribute value
+                    const link = icon.getAttribute('data-link');
+                    // Open the link in a new tab
+                    window.open(link, '_blank');
+                });
+            });
 
 
 //TYPING ANIMATION
@@ -157,7 +157,24 @@ icons.forEach(icon => {
         slideIndex++;
         showSlide(slideIndex);
         intervalID = setInterval(nextSlide, 5000);
-
-
     }
+
+
+    // BURGER MENU NAVIGATION - MOBILE
+
+    document.getElementById('burger-menu').addEventListener('click', function() {
+        this.classList.toggle('open'); 
+        document.getElementById('nav-menu').classList.toggle('open'); 
+      });
+
+    const navLinks = document.querySelectorAll('.nav-mob');
+
+    navLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            document.getElementById('burger-menu').classList.remove('open');
+            document.getElementById('nav-menu').classList.remove('open');
+            
+        })
+    })
+
     

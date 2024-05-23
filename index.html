@@ -7,21 +7,35 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
+        
         gtag('config', 'G-5VN01SYQ51');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Ch Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
 
 </head>
 <body>
     <!-- <div class="bubble"></div> -->
+    <div class="nav-menu" id="nav-menu">
+        <div class="navbar-mobile">
+            
+            <a href="#home" class="nav-mob">Home</a>
+            <a href="#about" class="nav-mob">About</a>
+            <a href="#projects" class="nav-mob">Projects</a>
+            <a href="#contact" class="nav-mob">Contact</a>
+            <div class="social">
+                <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok">
+                <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" >
+                <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram">
+            </div>
+        </div>
+    </div>
     <div class="header">
         
-        <img src="images/logo.png" class="logo" >
+        <img src="images/logo.png" class="logo" data-link="">
         <div class="navbar">
             
             <a href="#home">Home</a>
@@ -29,7 +43,11 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </div>
-          <img src="images/BURGER MENU.png" class="burger">
+          <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
     </div>
     <div id="home" class="page homepage">
         
