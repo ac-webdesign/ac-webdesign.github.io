@@ -35,7 +35,7 @@
     </div>
     <div class="header">
         
-        <img src="images/logo.png" class="logo" data-link="">
+        <a href="index.html#home"><img src="images/logo.png" class="logo"></a>
         <div class="navbar">
             
             <a href="#home">Home</a>
@@ -54,8 +54,8 @@
         <div class="hero-homepage">
             <h1 class="typingAnimation"></h1>
             <div id="buttons">
-                <button id="work-btn"><a href="#projects">Work</a></button>
-                <button id="about-btn"><a href="#about" id="aboutLink">About me</a></button>
+                <a href="#projects"><button id="work-btn">Projects</button></a>
+                <a href="#about" ><button id="about-btn">About me</button></a>
             </div>
             <div class="navigation-indicator">
                 <a href="#home" class="dot"></a>
@@ -95,7 +95,7 @@
                         <li>HTML/HTML5</li>
                         <li>CSS/CSS3</li>
                         <li>JAVASCRIPT</li>
-                        <li>CURRENTLY LEARNING REACT.JS</li>
+                        <li>REACT</li>
                         <li>GIT</li>
                         <li>Design tools : FIGMA</li>
 
@@ -132,19 +132,21 @@
                     <div class="slide project2">
                         <img src="images/calcmycryptoimage.png">
                         <h1>CalcMyCrypto Application</h1>
-                        <p>CalcMyCrypto project is part of my study at UI/UX Design Specialization course taken on coursera.com</p>
+                        <p>CalcMyCrypto is a React project and part of my study at UI/UX Design Specialization.</p>
                         <div class="project-buttons">
-                            <h2 class="project-btn"><a href="calcmycrypto.html">Project info</a></h2>
-                            <h2 class="project-btn">Github repo</h2>
-                        </div>
+                            <a href="calcmycrypto.html"><h2 class="project-btn">Project info</h2></a>
+                            <a href="https://github.com/ac-webdesign/calcMyCrypto-Application">
+                                <h2 class="project-btn">Github repo</h2>
+                              </a>
+                            </div>
                     </div>
                     <div class="slide project1">
                         <img src="images/wakamo.png">
                         <h1>Wakamo sushi Restaurant</h1>
                         <p>Wakamo sushi restaurant project is part of my UI/UX Design Specialization course taken on coursera.com</p>
                         <div class="project-buttons">
-                            <h2 class="project-btn"><a href="wakamo.html">Project info</a></h2>
-                            <h2 class="project-btn">Github repo</h2>
+                            <a href="wakamo.html"><h2 class="project-btn">Project info</h2></a>
+                            
                         </div>
                     </div>
                     <div class="slide project3">
@@ -152,11 +154,24 @@
                         <h1>Javascript projects</h1>
                         <p>Here you can find some of my javascript projects I developed myself</p>
                         <div class="project-buttons">
-                            <h2 class="project-btn"><a href="javascript-projects.html">Javascript projects</a></h2>
-                            <h2 class="project-btn">Github repo</h2>
+                            <a href="javascript-projects.html"><h2 class="project-btn">Javascript projects</h2></a>
+                            <a href="https://github.com/ac-webdesign/Javascript-Projects">
+                                <h2 class="project-btn">Github repo</h2>
+                            </a>
                         </div>
                     </div>
-        
+                    <div class="slide project4">
+                        <img src="images/movieDBlogo.png">
+                        <h1>Movie finder database</h1>
+                        <p>MovieDB is a movie finder project using TMDB API. You can find any movie you want and see it's details</p>
+                        <div class="project-buttons">
+                            <a href="movieFinderInfo.html"><h2 class="project-btn">Movie finder DB</h2></a>
+                            <a href="https://github.com/ac-webdesign/movieDBfinder">
+                                <h2 class="project-btn">Github repo</h2>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
         
                 <button class="prev" onclick="prevSlide()">&#10094</button>

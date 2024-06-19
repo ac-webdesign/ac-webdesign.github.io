@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     darkBtn.addEventListener("mouseenter", function() {
         lightBtn.style.backgroundColor='transparent';
-        lightBtn.style.color='black';
-        aboutLink.style.color='white';
+        lightBtn.style.color='white';
         darkBtn.style.color='black';
 
 
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     darkBtn.addEventListener("mouseleave", function() {
         lightBtn.style.backgroundColor='white';
         lightBtn.style.color='black';
-        aboutLink.style.color='black';
+        darkBtn.style.color='white'
         // darkBtn.style.backgroundColor='red';
 
     });
