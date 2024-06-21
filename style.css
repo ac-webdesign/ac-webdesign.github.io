@@ -89,6 +89,7 @@ p{
     width: 150px;
     position: absolute;
     left: 10%;
+    top: 20%;
     cursor: pointer;
 }
 
@@ -177,6 +178,7 @@ p{
     padding:5px 30px;
     border: 2px var(--light-bg-color) solid;
     background-color:var(--light-bg-color);
+    color: var(--light-color);
     border-radius: 8px;
     cursor: pointer;
 }
@@ -188,7 +190,10 @@ p{
     font-size:var(--button-fontsize);
     border-radius: 8px;
     cursor: pointer;
-   
+    display: flex;
+    gap: 4px;
+    align-items: start;
+    justify-content: start;
 }
 #about-btn a{
     text-decoration: none;
@@ -202,7 +207,13 @@ p{
     font-size: var(--button-fontsize);
     border-radius: 8px;
 }
-
+#dark-icon{
+    width: 20px;
+}
+#light-icon{
+    width: 20px;
+    display: none;
+}
 /* TELEIES DEKSIA XREIAZONTAI PROGRAMMATISMO */
 
 .navigation-indicator {
@@ -533,7 +544,6 @@ a{
     overflow: visible;
     z-index: 100;
 }
-
 .next{
     right: -40px;
 }
@@ -697,6 +707,7 @@ a{
     display: flex;
     justify-content: start;
     flex-direction: column;
+    align-items: center;
 }
 .sideContact{
     display: flex;
@@ -839,85 +850,156 @@ input[type="text"],
 } */
 
 @media (max-width: 768px) {
+    .moviedb-page{
+        height: 120vh;
+    }
+    .calc-page{
+        height: 150vh;
 
-    h1{
-        font-size: 1.5rem;
     }
-    body,html{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        /* scroll-snap-type: none;
-        scroll-behavior: auto; */
-        background-image: linear-gradient(to right, rgb(24, 24, 24),rgb(15, 13, 13),rgb(12, 12, 66));
-        
-    }
-    
-    #home{
-        height: 100vh;
-        background-color: black;
-    }
-    .homepage{
-        background-size: cover;
-        /* background-image: none; */
-    }
-    .homepage p{
-        display: none;    
-    }
-    .hero-homepage{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        position:static;
-        max-width: 350px;
-    }
-    #about-btn a{
-        text-decoration: none;
-    }
-    .header{
-        width: 100%;
-        display: flex;
-        margin: 0;
-        justify-content: space-between;
+    .wakamo-page{
+        height: 130vh;
     }
     .burger {
         display: block; /* Display the burger menu on small screens */
         height: 30px; /* Set the height of the burger menu */
         width: auto; /* Allow the width to adjust automatically */
-        /* margin-right: 20%;  */
     }
+    h1{
+        font-size: 1.5rem;
+    }
+    body,html{
+        
+        scroll-snap-type: none;
+        scroll-behavior:smooth; 
+        transition: all 0.3s ease;
+
+    }
+
+      .nav-menu{
+          position: fixed;
+          height: 100vh;
+          width: 340px;
+          background-color: hsla(0, 0%, 86%, 0.5);
+          right: -100%;
+          z-index: 999;
+          backdrop-filter: blur(16px);
+          display: flex;
+          flex-direction: row;
+      }
+      .navbar-mobile{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: left;
+          position: fixed;
+          top: 20%;
+          right: 0;
+          gap: 28px;
+  
+      }
+      .navbar-mobile a{
+          text-decoration: none;
+          color: white;
+          font-size: 2.8rem;
+          background-color:transparent;
+          width: 340px;
+          padding-left: 50px;
+  
+      }
+      .navbar-mobile a:hover{
+          text-shadow: 2px 2px rgb(44, 44, 44);
+          background-color: #bbb;
+      }
+      
+      .burger-menu {
+          width: 30px;
+          cursor: pointer;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1000; /* Ensures the burger menu is above other elements */
+        }
+       
+        .bar {
+          width: 100%;
+          height: 4px;
+          background-color: rgb(202, 202, 202);
+          margin: 5px 0;
+          transition: all 0.3s ease; /* Smooth transition for the transformation */
+        }
+        .burger-menu.open .bar:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px); /* Top bar transforms to part of X */
+        }
+    
+        .burger-menu.open .bar:nth-child(2) {
+          opacity: 0; /* Middle bar disappears */
+        }
+    
+        .burger-menu.open .bar:nth-child(3) {
+          transform: rotate(-45deg) translate(8px, -8px); /* Bottom bar transforms to part of X */
+        }
+        #nav-menu.open {
+          right: 0; /* Slides in the nav menu */
+        }
+        
+        .navbar-mobile .social{
+          padding-left: 50px;
+        }
+    #home{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-btn a{
+        text-decoration: none;
+    }
+    #work-btn{
+        text-align: center;
+    }
+    .typingAnimation{
+        height: 40px;
+        width: 300px;
+    }
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .navbar {
         display: none; /* Hide the navbar on small screens */
     }
-    #about{
-        height: 120vh;
-    }
+   
     .about-page{
         /* background-image: none; */
         justify-content: center;
 
     }
-    .typingAnimation{
-        height: 70px;
-        width: 200px;
-        display: inline-block;
-        position: relative;
-    }
+    
     .red{
         color: red;
     }
     .about-hero{
-        margin-top: 40px;
-
         align-items: center;
-        max-width: 90%;
+        width: 380px;
+        padding: 24px;
+    }
+    .about{
+        padding: 20px 5px;
 
     }
     .about-hero p{
         font-size: 1rem;
         margin-bottom: 40px;
     }
+
     .tabs{
         flex-direction: column;
         justify-content: center;
@@ -925,21 +1007,33 @@ input[type="text"],
         flex-wrap: wrap;
     }
     .tab{
-        width: 200px;
+        width: 260px;
     }
     .tab p{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
     #aboutImage{
         display: none;
     }
-    #work{
-        height: 100vh;
+    .projects-container{
+        width: 80%;
+        min-height: 80vh;
+        padding: 0;
+    }
+    .projects-container h1{
+        font-size: 1.6rem;
     }
     .work{
         flex-direction: column-reverse;
         margin-bottom: 0;
-
+    }
+    .slide p{
+        font-size: 1rem;
+        font-weight: 200;
+    }
+    .slide img{
+        width: 300px;
+        height: 225px;
     }
     .work h1{
         margin-left: 0;
@@ -958,19 +1052,20 @@ input[type="text"],
     #workImage2{
         width: 90%;
     }
-    #contact{
-        height: 120vh;
+    .prev{
+        left: -80px;
+       
+    }
+    .next{
+        right: -80px;
     }
     .contact{
+        display: flex;
         flex-direction: column;
-     }
-     .contact-hero{
-        margin-top: 100px;
         justify-content: center;
-        width: 80%;
-        padding: 0;
-        align-items: left;
+        align-items: center;
      }
+     
    .contact h2{
         font-size: 1rem;
    }
@@ -978,6 +1073,7 @@ input[type="text"],
     .contact-hero p{
         font-size: 1.1rem;
     }
+
     .social img{
         width: 40px;
     }
@@ -985,106 +1081,42 @@ input[type="text"],
         width: 130px;
     }
 
-  
+    
     form{
         max-width: 80%;
     }
 }
 
 
-@media (max-width: 550px) {
-    body{
-      transition: transform 0.3s ease;
-    }
-    .nav-menu{
-        position: fixed;
-        height: 100vh;
-        width: 340px;
-        background-color: hsla(0, 0%, 86%, 0.5);
-        right: -100%;
-        z-index: 999;
-        backdrop-filter: blur(16px);
-        transition: right 0.3s ease; /* Smooth transition for sliding in */
-        display: flex;
-        flex-direction: row;
-    }
-    .navbar-mobile{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-        position: fixed;
-        top: 20%;
-        right: 0;
-        gap: 28px;
-
-    }
-    .navbar-mobile a{
-        text-decoration: none;
-        color: white;
-        font-size: 2.8rem;
-        background-color:transparent;
-        width: 340px;
-        padding-left: 50px;
-
-    }
-    .navbar-mobile a:hover{
-        text-shadow: 2px 2px rgb(44, 44, 44);
-        background-color: #bbb;
-    }
+@media (max-width: 480px) {
     
-    .burger-menu {
-        width: 30px;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000; /* Ensures the burger menu is above other elements */
-      }
-     
-      .bar {
-        width: 100%;
-        height: 4px;
-        background-color: rgb(202, 202, 202);
-        margin: 5px 0;
-        transition: all 0.3s ease; /* Smooth transition for the transformation */
-      }
-      .burger-menu.open .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); /* Top bar transforms to part of X */
-      }
-  
-      .burger-menu.open .bar:nth-child(2) {
-        opacity: 0; /* Middle bar disappears */
-      }
-  
-      .burger-menu.open .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px); /* Bottom bar transforms to part of X */
-      }
-      #nav-menu.open {
-        right: 0; /* Slides in the nav menu */
-      }
-      
-      .navbar-mobile .social{
-        padding-left: 50px;
-      }
 
-    .hero-homepage{
-        
-        left: 0%;
+    
+    #buttons{
+        flex-direction: column;
+        width: 220px;
     }
    .slide img{
     width: 200px;
     height: 200px;
    }
+   .about-hero{
+    align-items: center;
+    width: 300px;
+    padding: 24px 0;
+}
    .about{
     text-align: center;
     padding: 0;
-    height: 200px;
     justify-content: center;
    }
-   .about-hero{
-        margin-top: 0;
-   }
+   .prev{
+    left: -40px;
+   
+}
+    .next{
+    right: -40px;
+}
    .about-hero h1{
     margin: 0;
    }
@@ -1127,7 +1159,7 @@ input[type="text"],
     align-items: center;
 }
 .basicContact{
-align-items: center;}
+    align-items: center;}
 .calcmycrypto p{
     width: 350px;
 }

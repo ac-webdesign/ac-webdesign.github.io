@@ -1,15 +1,18 @@
 
-//KOYMPIA WORK KAI ABOUT POY ALLAZOYN XRWMA
+//KOYMPIA WORK KAI GITHUB 
 
 document.addEventListener("DOMContentLoaded", function() {
     const darkBtn = document.getElementById("work-btn");
     const lightBtn = document.getElementById("about-btn");
-    const aboutLink = document.getElementById("aboutLink");
+    const darkIcon = document.getElementById('dark-icon');
+    const lightIcon = document.getElementById('light-icon');
 
     darkBtn.addEventListener("mouseenter", function() {
         lightBtn.style.backgroundColor='transparent';
         lightBtn.style.color='white';
         darkBtn.style.color='black';
+        darkIcon.style.display= 'none';
+        lightIcon.style.display='block';
 
 
     });
@@ -18,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         lightBtn.style.backgroundColor='white';
         lightBtn.style.color='black';
         darkBtn.style.color='white'
-        // darkBtn.style.backgroundColor='red';
-
+        darkIcon.style.display='block'
+        lightIcon.style.display='none'
     });
    
    

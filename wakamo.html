@@ -16,19 +16,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="nav-menu" id="nav-menu">
+        <div class="navbar-mobile">
+            
+            <a href="#home" class="nav-mob">Home</a>
+            <a href="#about" class="nav-mob">About</a>
+            <a href="#projects" class="nav-mob">Projects</a>
+            <a href="#contact" class="nav-mob">Contact</a>
+            <div class="social">
+                <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok">
+                <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" >
+                <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram">
+            </div>
+        </div>
+    </div>
     <div class="header">
         
-        <img src="images/logo.png" class="logo">
+        <a href="index.html#home"><img src="images/logo.png" class="logo"></a>
         <div class="navbar">
             
-            <a href="index.html#home">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#projects">Projects</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </div>
-          <img src="images/BURGER MENU.png" class="burger">
+          <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
     </div>
-    <div id="work" class="page work-page">
+    <div id="work" class="page work-page wakamo-page">
         <div class="work">
             <div class="work-hero">
                                    
@@ -51,6 +70,7 @@
                     <li>Visual Mockups</li>
                     <li>Clickable Prototype</li>
                 </ul>
+                <a href="https://www.figma.com/proto/XqlVkN1RzdOhPzsCmdEgaW/WIREFRAME-FOR-WAKAMO-SUSHI?page-id=0%3A1&node-id=136-22&viewport=864%2C-84%2C0.04&t=OFnloTTSAdEXEfzx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=136%3A22&show-proto-sidebar=1" target="_blank"><button id="work-btn" style="margin-bottom: 8px;">Clickable Prototype</h2></a>
                 <button id="work-btn" style="margin-bottom: 8px;"><a href="files/Wakamo sushi restaurant - Final project.pdf" download>Download pdf</a></button>
                 <button id="work-btn"><a href="index.html#projects">Back</a></button>
             </div>
@@ -61,5 +81,21 @@
 
         </div>
     </div>
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+        this.classList.toggle('open'); 
+        document.getElementById('nav-menu').classList.toggle('open'); 
+      });
+
+    const navLinks = document.querySelectorAll('.nav-mob');
+
+    navLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            document.getElementById('burger-menu').classList.remove('open');
+            document.getElementById('nav-menu').classList.remove('open');
+            
+        })
+    })
+    </script>
 </body>
 </html>
