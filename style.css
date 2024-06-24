@@ -34,6 +34,8 @@ body, html {
     font-family: var(--font-poppins);
     scroll-snap-type: y mandatory; 
     scroll-behavior:smooth;
+    overflow-x: hidden;
+    background-color: black; 
 }
 
 h1{
@@ -132,7 +134,6 @@ p{
 /* TO BURGER ENERGOPOIEITAI OTAN WIDTH<768PX TO BLEPEIS STA @MEDIA */
 .burger{
     display: none;
-    position: absolute; /*DEN KSERW AN XREIAZETAI*/
     right: 10%;
     cursor: pointer;
 
@@ -604,81 +605,6 @@ a{
     height: auto;
 }
 
-/* JAVASCRIPT PROJECTS  */
-.thumbnail {
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-    background-size: cover;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 1rem;
-    font-weight: 700;
-    transition: transform 0.5s ease;
-}
-.thumbnail:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 2px black;
-}
-.thumbnail-memory{
-    background-image: url(images/icons/memorygame.png);
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    background-size: cover;
-}
-.thumbnail-slots{
-    background-image: url(images/icons/slot7.png);
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    background-size: cover;
-}
-.thumbnail-roulette{
-    background-image: url(images/icons/roulette.png);
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    background-size: cover;
-    border-radius: 50%;
-}
-.thumbnail-millionaire{
-    background-image: url(images/icons/millionaire.png);
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    background-size: cover;
-    border-radius: 50%;
-}
-.thumbnail a{
-    text-decoration: none;
-    color: rgba(219, 219, 219, 0.753);
-    width: 150px;
-}
-/* Styles for popup content */
-.popup-content {
-    padding: 20px;
-}
-.thumbnails{
-
-    display: flex;
-}
-.javascript-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: var(--dark-bg-color); */
-    /* background-image: url(images/wallpaperbetter.jpg); */
-    /* background-size: cover; */
-    position: relative;
-    color: var(--dark-color);
-}
-.javascript-projects{
-    height: 200px;
-}
 
 /* CONTACT  PAGE*/
 
@@ -798,7 +724,9 @@ form{
     align-items: center;
 }
 
-
+.nav-menu{
+    display: none;
+}
 input[type="text"],
             input[type="email"],
             textarea {
@@ -854,6 +782,11 @@ input[type="text"],
         height: 120vh;
     }
     .calc-page{
+        align-items: center;
+        justify-content: center;
+        background-image: url(images/wallpaperbetter.jpg);
+        position: relative;
+        color: var(--dark-color);
         height: 150vh;
 
     }
@@ -877,6 +810,7 @@ input[type="text"],
     }
 
       .nav-menu{
+          display: block;
           position: fixed;
           height: 100vh;
           width: 340px;
@@ -1023,6 +957,12 @@ input[type="text"],
     .projects-container h1{
         font-size: 1.6rem;
     }
+    .project-buttons a{
+        padding: 0;
+    }
+    .project-btn{
+        width: 220px;
+    }
     .work{
         flex-direction: column-reverse;
         margin-bottom: 0;
@@ -1089,26 +1029,41 @@ input[type="text"],
 
 
 @media (max-width: 480px) {
-    
 
-    
     #buttons{
         flex-direction: column;
         width: 220px;
     }
    .slide img{
-    width: 200px;
-    height: 200px;
+        width: 200px;   
+        height: 200px;
+   }
+
+   .homepage{
+        height: 800px;
    }
    .about-hero{
     align-items: center;
     width: 300px;
     padding: 24px 0;
 }
+    .about-page{
+        height: 800px;
+    }
+ 
+   .navigation-indicator{
+        z-index: 9999;
+   }
    .about{
     text-align: center;
     padding: 0;
+    margin: 0;
     justify-content: center;
+   }
+
+   .projects-container{
+        height: 90vh;
+        margin-top: 100px;
    }
    .prev{
     left: -40px;
@@ -1118,10 +1073,13 @@ input[type="text"],
     right: -40px;
 }
    .about-hero h1{
-    margin: 0;
+        margin: 0;
+   }
+   .tabs{
+     margin-top: 20px;
    }
    .tab{
-    width: 100%;
+    width: 320px;
     height: 120px;
     padding: 0;
     justify-content: center;
@@ -1153,6 +1111,9 @@ input[type="text"],
     height: 100px;
     margin: 0;
 }
+.contact-page{
+    margin-bottom: 100px;
+}
 .contact{
     padding: 0;
     justify-content: center;
@@ -1162,18 +1123,16 @@ input[type="text"],
     align-items: center;}
 .calcmycrypto p{
     width: 350px;
+    padding: 0 16px;
 }
 .calcmycrypto img{
     margin-top: 200px;
 }
-.javascript-projects{
-    height: 400px;
-    flex-wrap: wrap;
+
+.wakamo-page{
+    height: auto;
+    margin-top: 100px;
 }
-.thumbnails{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 
 }

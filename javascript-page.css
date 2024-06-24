@@ -1,0 +1,127 @@
+/* JAVASCRIPT PROJECTS  */
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.5s ease;
+}
+.thumbnail:hover{
+    transform: scale(1.05);
+}
+.thumbnail-memory{
+    background-image: url(images/icons/memorygame.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+}
+.thumbnail-slots{
+    background-image: url(images/icons/slot7.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+}
+.thumbnail-roulette{
+    background-image: url(images/icons/roulette.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail-millionaire{
+    background-image: url(images/icons/millionaire.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail a{
+    text-decoration: none;
+    color: rgba(219, 219, 219, 0.753);
+    width: 150px;
+}
+
+.thumbnails{
+
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.javascript-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--dark-color);
+    height: 100vh;
+}
+
+.nav-menu{
+    display: none;
+}
+
+@media (max-width : 500px) {
+
+
+    
+    .thumbnail{
+        width: 100px;
+        height: 100px;
+        
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: transform 0.5s ease;
+    }
+    .thumbnails{
+        flex-direction: row;
+        width: 300px;
+        padding: 16px;
+    }
+    .thumbnail-memory{
+        background-image: url(images/icons/memorygame.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+    }
+    .thumbnail-slots{
+        background-image: url(images/icons/slot7.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+    }
+    .thumbnail-roulette{
+        background-image: url(images/icons/roulette.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .thumbnail-millionaire{
+        background-image: url(images/icons/millionaire.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+        border-radius: 50%;
+    }
+}

@@ -12,27 +12,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Javascript Projects</title>
+<link rel="stylesheet" href="javascript-page.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="javascript-projects.css">
 
 </head>
 <body>
-    <div class="header">
+    <div class="nav-menu" id="nav-menu">
+        <div class="navbar-mobile">
             
-            <img src="images/logo.png" class="logo">
-            <div class="navbar">
-                
-                <a href="index.html#home">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#projects">Projects</a>
-                <a href="index.html#contact">Contact</a>
+            <a href="index.html#home" class="nav-mob">Home</a>
+            <a href="index.html#about" class="nav-mob">About</a>
+            <a href="index.html#projects" class="nav-mob">Projects</a>
+            <a href="index.html#contact" class="nav-mob">Contact</a>
+            <div class="social">
+                <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok">
+                <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" >
+                <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram">
             </div>
-            <img src="images/BURGER MENU.png" class="burger">
+        </div>
     </div>
-
-    <div class="page javascript-page" id="javascript-projects">
+    <div class="header">
+        
+        <a href="index.html#home"><img src="images/logo.png" class="logo"></a>
+        <div class="navbar">
+            
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </div>
+    <div class="javascript-page" id="javascript-projects">
         <h1>Javascript Projects</h1>
-        <div class="work javascript-projects">
+        
             
             <div class="thumbnails">
                 <div class="thumbnail" id="thumbnail1" >
@@ -52,12 +70,12 @@
                     <a href="quiz-game.html" target="_blank">Quiz game</a>
                 </div>
             </div>
-        </div>
+        
         <a href="index.html#projects"><h2 class="project-btn" style="width: 250px; text-align: center; margin-top: 16px;" >Back</h2></a>
     </div>
 <!-- Thumbnails -->
 
-
+    
 
 
     <script src="javascript-projects.js"></script>
