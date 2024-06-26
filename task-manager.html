@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100px;
+            padding: 8px 20px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            text-decoration-skip-ink: auto;
+
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            text-decoration: none;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        .complete-btn {
+            background-color: #28a745;
+        }
+
+        .complete-btn:hover {
+            background-color: #218838;
+        }
+        .buttons{
+            display: flex;
+            gap: 10px;
+        }
+        .task-btn{
+            background-color: #007bff;
+            width: 20%;
+            padding: 10px;
+        }
+        #task-form{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add new task">
+            <button class="task-btn" type="submit">Add Task</button>
+        </form>
+        <ul id="task-list"></ul>
+    </div>
+    <script>
+        const taskForm = document.getElementById('task-form');
+        const taskInput = document.getElementById('task-input');
+        const taskList = document.getElementById('task-list');
+
+
+        // Load tasks from local storage when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(function(task) {
+                addTaskToDOM(task);
+            });
+        });
+
+        taskForm.addEventListener('submit',addTask);
+
+        function addTask(event){
+            event.preventDefault(); // prevent form submission
+
+            const taskText = taskInput.value.trim();
+
+            if(taskText!==""){
+                const task = { text: taskText, completed: false };
+                addTaskToDOM(task);
+                saveTaskToLocalStorage(task);
+                taskInput.value = '';
+
+            }
+            else{
+                alert('Please enter a task');
+            }
+        }
+
+        function addTaskToDOM(task) {
+            const taskItem = document.createElement('li');
+            taskItem.innerHTML = `
+                <span class="task-text ${task.completed ? 'completed' : ''}">${task.text}</span>
+                <div class='buttons'>
+                    <button class="complete-btn" ${task.completed ? 'style="display: none;"' : ''}>Complete</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            `;
+            taskList.appendChild(taskItem);
+        }
+
+        function saveTaskToLocalStorage(task) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+        function removeTaskFromLocalStorage(taskText) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks = tasks.filter(task => task.text !== taskText);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function updateTaskCompletionInLocalStorage(taskText, completed) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const task = tasks.find(task => task.text === taskText);
+            if (task) {
+                task.completed = completed;
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+        }
+        taskList.addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-btn')) {
+                const taskItem = event.target.closest('li');
+                const taskText = taskItem.querySelector('span.task-text').textContent;
+
+                // Remove the parent <li> element when delete button is clicked
+                taskItem.remove();
+                removeTaskFromLocalStorage(taskText);
+            }
+
+            if (event.target.classList.contains('complete-btn')) {
+                const taskItem = event.target.closest('li');
+                const taskText = taskItem.querySelector('span.task-text');
+                
+                taskText.classList.toggle('completed');
+                event.target.style.display = 'none';
+                updateTaskCompletionInLocalStorage(taskText.textContent, true);
+            }
+        });
+
+
+    </script>
+</body>
+</html>

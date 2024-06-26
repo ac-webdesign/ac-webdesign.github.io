@@ -46,6 +46,38 @@
     background-size: cover;
     border-radius: 50%;
 }
+.thumbnail-calculator{
+    background-image: url(images/icons/calculator.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail-tictactoe{
+    background-image: url(images/icons/tictactoe.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail-taskmanager{
+    background-image: url(images/icons/taskmanager.jpg);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
+.thumbnail-tetris{
+    background-image: url(images/icons/tetris.png);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 50%;
+}
 .thumbnail a{
     text-decoration: none;
     color: rgba(219, 219, 219, 0.753);
@@ -64,11 +96,13 @@
     flex-wrap: wrap;
 }
 .javascript-page {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
+    top: 60px;
     color: var(--dark-color);
     height: 100vh;
 }
@@ -123,5 +157,38 @@
         cursor: pointer;
         background-size: cover;
         border-radius: 50%;
+    }
+    .thumbnail-calculator{
+        background-image: url(images/icons/calculator.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size:cover;
+        border-radius: 50%;
+    }
+    .thumbnail-tictactoe{
+        background-image: url(images/icons/tictactoe.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .thumbnail-taskmanager{
+        background-image: url(images/icons/taskmanager.jpg);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .thumbnail-tetris{
+        background-image: url(images/icons/tetris.png);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-size: cover;
+        overflow: visible;
+        /* border-radius: 50%; */
     }
 }

@@ -34,7 +34,6 @@ body, html {
     font-family: var(--font-poppins);
     scroll-snap-type: y mandatory; 
     scroll-behavior:smooth;
-    overflow-x: hidden;
     background-color: black; 
 }
 
@@ -421,7 +420,7 @@ p{
 }
 .projects-container{
     width: 80%;
-    height: 80vh;
+    height: 85vh;
     background-color: rgba(68, 64, 64, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 16px;
@@ -1029,7 +1028,7 @@ input[type="text"],
 
 
 @media (max-width: 480px) {
-
+    
     #buttons{
         flex-direction: column;
         width: 220px;

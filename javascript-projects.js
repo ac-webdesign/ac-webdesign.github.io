@@ -7,18 +7,31 @@ function openMemoryWindow() {
 
 function openSlotsWindow(){
     window.open('slots-game.html', '_blank');
-
 }
+
 function openRouletteWindow(){
     window.open('roulette.html', '_blank');
-
 }
 
 function openMillionaireWindow(){
     window.open('quiz-game.html', '_blank');
-
 }
 
+function openCalculatorWindow(){
+    window.open('calculator.html', '_blank');
+}
+
+function openTictactoeWindow(){
+    window.open('tictactoe.html', '_blank');
+}
+
+function openTaskmanagerWindow(){
+    window.open('task-manager.html', '_blank');
+}
+
+function openTetrisWindow(){
+    window.open('tetris.html', '_blank');
+}
 //BURGER MENU OPEN
 
 document.getElementById('burger-menu').addEventListener('click', function() {
