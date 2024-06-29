@@ -547,7 +547,6 @@ a{
 .next{
     right: -40px;
 }
-
 @keyframes fade {
 
     from {opacity: .6}
@@ -770,13 +769,71 @@ input[type="text"],
     from {scale: 1; opacity: 0.5;}
     to {scale: 1; opacity: 1;}
 }
-
+/* CALCMYCRYPTO PAGE */
+.headphones-page{
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/wallpaperbetter.jpg);
+    position: relative;
+    color: var(--dark-color);
+    height: auto;
+    padding-top: 5rem;
+}
+.headphones-page li{
+    font-weight: 200;
+    max-width: 40ch;
+}
+.headphones-page span{
+    font-weight: 400;
+}
+#workImage3{
+    width: 700px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* FOR JAVASCRIPT */
 /* .transparent-background {
     background-color: transparent !important;
 } */
-
+@media (max-width:1080) {
+    
+}
 @media (max-width: 768px) {
+    .headphones-page{
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+    .headphones-page .right-section-wakamo{
+        align-items: center;
+    }
+    #workImage3{
+        width: 360px;
+        height: auto;
+        position: relative;
+        top: -180px;
+    }
+    .headphones-page h2{
+        max-width: 300px;
+        text-align: center;
+        position: relative;
+        top: -170px;
+    }
+    .headphones-page p{
+        position: relative;
+        top: -160px;
+    }
+    .headphones-page .links{
+        position: relative;
+        top: -130px;
+    }
+    .headphones-page .work-hero{
+        position: relative;
+        top: -130px;
+    }
     .moviedb-page{
         height: 120vh;
     }

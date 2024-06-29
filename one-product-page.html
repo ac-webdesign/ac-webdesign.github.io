@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VN01SYQ51"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5VN01SYQ51');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI - Sennheiser HD 650 Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="nav-menu" id="nav-menu">
+        <div class="navbar-mobile">
+            
+            <a href="index.html#home" class="nav-mob">Home</a>
+            <a href="index.html#about" class="nav-mob">About</a>
+            <a href="index.html#projects" class="nav-mob">Projects</a>
+            <a href="index.html#contact" class="nav-mob">Contact</a>
+            <div class="social">
+                <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok">
+                <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" >
+                <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram">
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        
+        <a href="index.html#home"><img src="images/logo.png" class="logo"></a>
+        <div class="navbar">
+            
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </div>
+    <div id="work" class="page work-page headphones-page">
+        <div class="work calcmycrypto">
+            <div class="work-hero">
+                                   
+                <br><br><b>Key features:</b>
+
+                <ul>
+                    <li><b>1. Responsive Design:</b> <br>The page layout adjusts seamlessly across various device sizes, 
+                        ensuring a consistent user experience whether viewed on a desktop, 
+                        tablet, or mobile device.</li>
+                    <li><b>2. Interactive Elements:</b><br>
+                        Clicking on different product photos updates the main display image, 
+                        providing a dynamic viewing experience. <br>
+                        Also users can click on different color options to see how the product looks in each color.
+                    </li>
+                    <li><b>Visual Appeal:</b><br> Utilizes a clean, dark-themed design with contrasting colors to highlight important elements. 
+                        The font choices and color schemes enhance readability and visual hierarchy.</li>
+                    <li><b>Product Details:</b>
+                        <br><span>Hero Section:</span> Introduces the product with bold statements about its superior sound quality and immersive experience.
+                        <br><span>Specifications:</span> Detailed specs are presented in an organized manner, highlighting key features such as impedance, sound pressure level, battery life, Bluetooth version, and frequency range.
+                        <br><span>Pricing:</span> Clearly displays the price with an accompanying description of the product’s benefits.</li>
+                    
+                </ul>                   
+                    
+            </div>
+            <div class="right-section-wakamo">
+                <img src="images/headphones laptop smartphone.png" alt="" id="workImage3">
+                <h2>Sennheiser HD 650 Product Page</h2>
+                <p style="max-width: 500px;"><b>Project Description:</b>
+
+                    The Sennheiser HD 650 product page is a fictional, portfolio 
+                    project designed to showcase my web development and design 
+                    skills. The page features a sleek, modern design with responsive 
+                    elements, emphasizing user experience and interactivity. 
+                    
+                </p>
+                <div class="links">
+                    <a href="https://ui-headphones.netlify.app/"><button id="work-btn" style="margin-bottom: 8px;">Open website</button></a>
+                    <a href="https://github.com/ac-webdesign/One-product-page" target="_blank"><button id="work-btn" style="margin-bottom: 8px;">Github repository</button></a>
+                    <a href="index.html#projects">
+                    <button id="work-btn">Back</button></a>
+                </div>
+ 
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+        this.classList.toggle('open'); 
+        document.getElementById('nav-menu').classList.toggle('open'); 
+      });
+
+    const navLinks = document.querySelectorAll('.nav-mob');
+
+    navLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            document.getElementById('burger-menu').classList.remove('open');
+            document.getElementById('nav-menu').classList.remove('open');
+            
+        })
+    })
+    </script>
+</body>
+</html>
+   
+   
+   <p>
+        Sennheiser HD 650 Product Page
+Overview
+The Sennheiser HD 650 product page is a fictional, portfolio project designed to showcase my web development and design skills. The page features a sleek, modern design with responsive elements, emphasizing user experience and interactivity. This project includes several key sections such as the hero section, product specifications, pricing details, and a disclaimer.
+
+Key Features
+Responsive Design: The page layout adjusts seamlessly across various device sizes, ensuring a consistent user experience whether viewed on a desktop, tablet, or mobile device.
+Interactive Elements:
+Image Selection: Users can click on different color options to see how the product looks in each color.
+Photo Gallery: Clicking on different product photos updates the main display image, providing a dynamic viewing experience.
+Visual Appeal: Utilizes a clean, dark-themed design with contrasting colors to highlight important elements. The font choices and color schemes enhance readability and visual hierarchy.
+Product Details:
+Hero Section: Introduces the product with bold statements about its superior sound quality and immersive experience.
+Specifications: Detailed specs are presented in an organized manner, highlighting key features such as impedance, sound pressure level, battery life, Bluetooth version, and frequency range.
+Pricing: Clearly displays the price with an accompanying description of the product’s benefits.
+Disclaimer: A clear disclaimer is provided to inform users that the page is a fictional creation for portfolio and educational purposes, with no affiliation to Sennheiser.
+Technical Implementation
+HTML & CSS: The structure and styling are implemented using HTML5 and CSS3, ensuring a semantic and accessible layout.
+Flexbox Layout: Utilized extensively to create flexible and responsive layouts for various sections.
+JavaScript: Adds interactivity, including event listeners for color selection and photo gallery updates.
+Learning Outcomes
+This project allowed me to refine several important skills:
+
+Responsive Web Design: Gained deeper insights into creating layouts that adapt to different screen sizes using media queries.
+Interactivity with JavaScript: Enhanced my ability to manipulate the DOM and create interactive user interfaces.
+Design Principles: Improved my understanding of color theory, typography, and visual hierarchy to create aesthetically pleasing web pages.
+Conclusion
+The Sennheiser HD 650 product page project demonstrates my ability to build responsive, interactive, and visually appealing web pages. It reflects my proficiency in front-end development and my attention to detail in creating user-centered designs. This project is a testament to my capability to translate design concepts into functional web experiences.
+
+
+    </p>
