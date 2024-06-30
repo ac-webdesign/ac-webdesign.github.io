@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VN01SYQ51"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5VN01SYQ51');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI - Chess benefits website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-menu" id="nav-menu">
+        <div class="navbar-mobile">
+            <a href="index.html#home" class="nav-mob">Home</a>
+            <a href="index.html#about" class="nav-mob">About</a>
+            <a href="index.html#projects" class="nav-mob">Projects</a>
+            <a href="index.html#contact" class="nav-mob">Contact</a>
+            <div class="social">
+                <img src="images/social/tiktokRed.png" alt="tikTok" class="icon tiktok">
+                <img src="images/social/facebookRed.png" alt="Facebook" class="icon facebook" >
+                <img src="images/social/telegramRed.png" alt="telegram" class="icon telegram">
+                <img src="images/social/instagramRed.png" alt="instagram" class="icon instagram">
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        
+        <a href="index.html#home"><img src="images/logo.png" class="logo"></a>
+        <div class="navbar">
+            
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </div>
+    <div id="work" class="page work-page headphones-page">
+        <div class="work calcmycrypto">
+            <div class="work-hero">
+                                   
+                <br><br><b>Key features:</b>
+                <ul>
+                    <li><b>Responsive Design:</b> <br>The page layout adjusts seamlessly across various device sizes, 
+                        ensuring a consistent user experience whether viewed on a desktop, 
+                        tablet, or mobile device.</li><br>
+                    <li><b>Hero section:</b><br>
+                        A visually striking hero section with a dark gradient background.
+                        A prominent title emphasizing the benefits of playing chess.
+                        A "Learn More" button to engage users.
+                    </li><br>
+                    <li><b>Benefits Section:
+                    </b><br> Three distinct subsections highlighting the emotional, cognitive, and social benefits of chess.
+                    Each subsection includes an image and a list of specific benefits.
+                    Hover effects on each benefit card to enhance interactivity.</li><br>
+                    <li><b>Play Chess:</b>
+                        Information on how to start playing chess.
+                        Encourages users to utilize online platforms and join local clubs.
+                    </li><br>
+                    <li><b>Target Audience:</b>
+                        Chess enthusiasts and beginners interested in learning more about the benefits of playing chess.
+                        Individuals looking for cognitive, emotional, and social development through engaging activities.
+                        Visitors seeking an easy-to-navigate, informative website about chess.
+                        This project aims to create a compelling and informative platform that promotes the numerous benefits 
+                        of playing chess, encouraging more people to take up the game and join a 
+                        community of like-minded individuals.</li>
+                </ul>                   
+                    
+            </div>
+            <div class="right-section-wakamo">
+                <img src="images/chess laptop smartphone.png" alt="" id="workImage3">
+                <h2>Chess benefits website</h2>
+                <p style="max-width: 500px;"><b>Project Description:</b>
+
+                    The website utilizes a modern, clean design with a focus on usability and aesthetics.
+                    The layout is structured using flexbox for responsive and flexible design.
+                    Background gradients and carefully chosen color schemes create a visually engaging experience.
+                    Minimalistic approach ensures the content is the focal point without unnecessary distractions.
+                    
+                </p>
+                <div class="links">
+                    <a href="https://ui-chessplus.netlify.app/"><button id="work-btn" style="margin-bottom: 8px;">Open website</button></a>
+                    <a href="https://github.com/ac-webdesign/UI-chess-website" target="_blank"><button id="work-btn" style="margin-bottom: 8px;">Github repository</button></a>
+                    <a href="index.html#projects">
+                    <button id="work-btn">Back</button></a>
+                </div>
+ 
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+        this.classList.toggle('open'); 
+        document.getElementById('nav-menu').classList.toggle('open'); 
+      });
+
+    const navLinks = document.querySelectorAll('.nav-mob');
+
+    navLinks.forEach(link=>{
+        link.addEventListener('click',function(){
+            document.getElementById('burger-menu').classList.remove('open');
+            document.getElementById('nav-menu').classList.remove('open');
+            
+        })
+    })
+    </script>
+</body>
+</html>
+   
