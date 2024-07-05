@@ -52,11 +52,12 @@
     <div id="home" class="page homepage">
         
         <div class="hero-homepage">
-            <h1 class="typingAnimation"></h1>
+            <h1 class="typingAnimation" id="typingAnimation"></h1>
             <div id="buttons">
                 <a href="#projects"><div id="work-btn">Projects</div></a>
                 <a href="https://github.com/ac-webdesign" ><div id="about-btn"><img src="images/icons/github-mark.svg" alt="github-icon" id="dark-icon"><img src="images/icons/github-mark-white.svg" alt="github-icon" id="light-icon"><span>&nbsp;&nbsp;Github account</span></div></a>
-            </div>
+            </div><br>
+            
             <div class="navigation-indicator">
                 <a href="#home" class="dot"></a>
                 <a href="#about" class="dot"></a>
@@ -64,7 +65,22 @@
                 <a href="#contact" class="dot"></a>
             </div>
         </div>
-        
+        <div class="latest-projects">
+            <u>
+                <h2>My latest UI projects: </h2>
+            </u>
+            <a href="https://ui-headphones.netlify.app/">
+                <p>One product page - Sennheiser Headphones</p>
+            </a>
+            <a href="https://ui-chessplus.netlify.app/">
+                <p>Benefits of playing Chess website</p>
+            </a>
+            <a href="https://bridgerton-bookstore.netlify.app/">
+                <p>Bridgerton Series Bookstore </p>
+            </a>
+            
+
+        </div>
     </div>
    
     <div id = "about" class="page about-page">
@@ -199,7 +215,18 @@
                             </a>
                         </div>
                     </div>
-
+                    <div class="slide project7">
+                        <img src="images/bridgerton laptop smartphone.png">
+                        <h1>Bridgerton bookstore UI</h1>
+                        <p>This project is a UI design for a Bridgerton Series Bookstore, featuring a dynamic book carousel, interactive descriptions, and seamless navigation.</p>
+                        <div class="project-buttons">
+                            <a href="https://bridgerton-bookstore.netlify.app/" target="_blank"><h2 class="project-btn" >Open website</h2></a>
+                            <a href="bridgerton.html"><h2 class="project-btn">Project info</h2></a>
+                            <a href="https://github.com/ac-webdesign/UI-chess-website" target="_blank">
+                                <h2 class="project-btn">Github repo</h2>
+                            </a>
+                        </div>
+                    </div>
                 </div>
         
                 <button class="prev" onclick="prevSlide()">&#10094</button>
@@ -246,63 +273,8 @@
     <script src="three.min.js"></script>
     <script src="vanta.net.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        VANTA.NET({
-        el: "#contact",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xfd0000,
-        backgroundColor: 0x101011,
-        points: 5.00,
-        spacing: 14.00
-    })
-    VANTA.NET({
-        el: "#home",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 0.80,
-        scaleMobile: 1.00,
-        color: 0xfd5600,
-        backgroundColor: 0x101011,
-        points: 5.00,
-        spacing: 12.00
-    })
-    VANTA.NET({
-        el: "#projects",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xfd5600,
-        backgroundColor: 0x101011,
-        points: 5.00,
-        spacing: 14.00
-    })
-    VANTA.NET({
-        el: "#about",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xfd5600,
-        backgroundColor: 0x101011,
-        points: 5.00,
-        spacing: 14.00
-    })
+    <script src="vanta.js">
+        
     </script>
 </body>
 </html>

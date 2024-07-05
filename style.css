@@ -6,6 +6,13 @@
 
 :root{
 
+
+    /* VANTA LIGHT-DARK MODE*/
+    --background-dark: #101011;
+    --background-light: #f5f5f5;
+    --color-dark: #fd5600;
+    --color-light: #000000;
+    
     /* COLORS */
     --dark-bg-color:black;
     --light-bg-color:white;
@@ -36,6 +43,23 @@ body, html {
     scroll-behavior:smooth;
     background-color: black; 
 }
+/* LIGHT - DARK MODE STYLES */
+#toggle-theme {
+    width: 200px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--color-dark);
+}
+
+body.light-mode {
+    background-color: var(--background-light);
+    color: var(--color-light);
+}
+
 
 h1{
     font-weight: var(--heading-fontweight);
@@ -58,15 +82,6 @@ p{
     scroll-snap-align: start;
 }
 
-/* HOMEPAGE - PAGE 1 */
-
-
-.homepage {
-    /* background-image: url(images/wallpaperbetter.jpg); */
-    background-color:var(--dark-bg-color);
-    color:var(--dark-color);
-    background-size: cover;
-}
 
 
 /* HEADER */
@@ -145,11 +160,35 @@ p{
     flex-direction: column;
     position: absolute; 
     left: 20%;
-}
-.typingAnimation{
-    height: 40px;
-}
+    }
+    .typingAnimation{
+        height: 40px;
+    }
 
+    .homepage {
+        /* background-image: url(images/wallpaperbetter.jpg); */
+        background-color:var(--dark-bg-color);
+        color:var(--dark-color);
+        background-size: cover;
+    }
+    .latest-projects{
+        background-color:rgba(0, 0, 0, 0.63);
+        width: 100%;
+        position: absolute;
+        bottom: 100px;
+        padding-left: 12rem;
+    }
+    .latest-projects h2{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    .latest-projects a{
+        text-decoration: none;
+        color: white;
+    }
+    .latest-projects a:hover{
+        color: yellow;
+    }
 /* HOMEPAGE BUTTONS */
 #buttons{
     display: flex;
@@ -572,6 +611,7 @@ a{
     align-items: left;
     justify-content: top;
 }
+
 /* TO KEIMENO MAZI ME THN EIKONA */
 .work{
     width: 90%;
@@ -799,12 +839,16 @@ input[type="text"],
 /* .transparent-background {
     background-color: transparent !important;
 } */
-@media (max-width:1080) {
-    
-}
+
+
 @media (max-width: 768px) {
+    .latest-projects{
+        
+        position: absolute;
+        bottom: 100px;
+        padding-left: 5rem;
+    }
     .headphones-page{
-        flex-direction: column;
         padding-top: 5rem;
     }
     .headphones-page .right-section-wakamo{
@@ -908,7 +952,7 @@ input[type="text"],
           position: fixed;
           top: 20px;
           right: 20px;
-          z-index: 1000; /* Ensures the burger menu is above other elements */
+          z-index: 1000; 
         }
        
         .bar {
@@ -923,21 +967,26 @@ input[type="text"],
         }
     
         .burger-menu.open .bar:nth-child(2) {
+
           opacity: 0; /* Middle bar disappears */
         }
     
         .burger-menu.open .bar:nth-child(3) {
           transform: rotate(-45deg) translate(8px, -8px); /* Bottom bar transforms to part of X */
         }
+        #nav-menu {
+            transition: all 0.4s ease-out;
+
+        }
         #nav-menu.open {
-          right: 0; /* Slides in the nav menu */
+            transition: all 0.4s ease-in;
+            right: 0; /* Slides in the nav menu */
         }
         
         .navbar-mobile .social{
           padding-left: 50px;
         }
     #home{
-        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1085,7 +1134,17 @@ input[type="text"],
 
 
 @media (max-width: 480px) {
-    
+    .latest-projects{
+        position: relative;
+        bottom: -200px;
+        padding-left: 3rem;
+    }
+    .latest-projects h2{
+        font-size: 0.8rem;
+    }
+    .latest-projects p{
+        font-size: 0.8rem;
+    }
     #buttons{
         flex-direction: column;
         width: 220px;
@@ -1094,7 +1153,6 @@ input[type="text"],
         width: 200px;   
         height: 200px;
    }
-
    .homepage{
         height: 800px;
    }
@@ -1120,6 +1178,9 @@ input[type="text"],
    .projects-container{
         height: 90vh;
         margin-top: 100px;
+   }
+   .projects-container p{
+    font-size: 0.8rem;
    }
    .prev{
     left: -40px;
@@ -1192,3 +1253,4 @@ input[type="text"],
 
 
 }
+
