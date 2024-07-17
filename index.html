@@ -69,13 +69,16 @@
             <u>
                 <h2>My latest UI projects: </h2>
             </u>
-            <a href="https://ui-headphones.netlify.app/">
+            <a href="https://free-bitcoin-hunter.netlify.app/" target="_blank">
+                <p>Bitcoin-hunter website</p>
+            </a>
+            <a href="https://ui-headphones.netlify.app/" target="_blank">
                 <p>One product page - Sennheiser Headphones</p>
             </a>
-            <a href="https://ui-chessplus.netlify.app/">
+            <a href="https://ui-chessplus.netlify.app/" target="_blank">
                 <p>Benefits of playing Chess website</p>
             </a>
-            <a href="https://bridgerton-bookstore.netlify.app/">
+            <a href="https://bridgerton-bookstore.netlify.app/" target="_blank">
                 <p>Bridgerton Series Bookstore </p>
             </a>
             
@@ -157,7 +160,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="slide project1">
+                    <!-- <div class="slide project1">
                         <img src="images/wakamo.png">
                         <h1>Wakamo sushi Restaurant</h1>
                         <p>Wakamo sushi restaurant project is part of my UI/UX Design Specialization course taken on coursera.com</p>
@@ -166,7 +169,7 @@
                             <a href="wakamo.html"><h2 class="project-btn">Project info</h2></a>
                             
                         </div>
-                    </div>
+                    </div> -->
                     <div class="slide project3">
                         <img src="images/javascript.png">
                         <h1>Javascript projects</h1>
@@ -178,13 +181,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="slide project4">
-                        <img src="images/movieDBlogo.png">
-                        <h1>Movie finder database</h1>
-                        <p>MovieDB is a movie finder project using TMDB API. You can find any movie you want and see it's details</p>
+                    <div class="slide project8">
+                        <img src="images/cryptohunterui.png">
+                        <h1>Bitcoin Hunter Website</h1>
+                        <p>Bitcoin hunter is crypto affiliate marketing website.</p>
                         <div class="project-buttons">
-                            <a href="movieFinderInfo.html"><h2 class="project-btn" target="_blank">Movie finder DB</h2></a>
-                            <a href="https://github.com/ac-webdesign/movieDBfinder" target="_blank">
+                            <a href="https://free-bitcoin-hunter.netlify.app/" target="_blank"><h2 class="project-btn" >Open website</h2></a>
+                            <a href="https://github.com/ac-webdesign/Crypto-hunter" target="_blank">
                                 <h2 class="project-btn">Github repo</h2>
                             </a>
                         </div>
@@ -199,6 +202,17 @@
                             <a href="https://ui-headphones.netlify.app/" target="_blank"><h2 class="project-btn" >Open website</h2></a>
                             <a href="one-product-page.html"><h2 class="project-btn">Project info</h2></a>
                             <a href="https://github.com/ac-webdesign/One-product-page" target="_blank">
+                                <h2 class="project-btn">Github repo</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide project4">
+                        <img src="images/movieDBlogo.png">
+                        <h1>Movie finder database</h1>
+                        <p>MovieDB is a movie finder project using TMDB API. You can find any movie you want and see it's details</p>
+                        <div class="project-buttons">
+                            <a href="movieFinderInfo.html"><h2 class="project-btn" target="_blank">Movie finder DB</h2></a>
+                            <a href="https://github.com/ac-webdesign/movieDBfinder" target="_blank">
                                 <h2 class="project-btn">Github repo</h2>
                             </a>
                         </div>
@@ -258,7 +272,7 @@
             
             <div class="basicContact">
                 <h2>Contact me</h2>
-                <form action="send_email.php" method="post">
+                <form action="/send-email" method="post" id="contact-form">
                     <input type="text" id="name" name="name" required placeholder="Name">
                     <input type="email" id="email" name="email" required placeholder="E-mail">
                     <textarea id="message" name="message" rows="5" required style="resize: none;"></textarea>
@@ -268,13 +282,10 @@
            
         </div>
     </div>
-
-  
+    
     <script src="three.min.js"></script>
     <script src="vanta.net.min.js"></script>
     <script src="script.js"></script>
-    <script src="vanta.js">
-        
-    </script>
+    <script src="vanta.js"></script>
 </body>
 </html>
